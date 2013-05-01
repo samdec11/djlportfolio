@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+<title>David's Art Portfolio</title>
+  <%= stylesheet_link_tag "application", :media=>"all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="name">
+        <h1>David Loncle</h1>
+      </li>
+    </ul>
+    <section>
+      <ul>
+        <li class="divider"></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li>|</li>
+        <li><%= link_to 'Art', art_path %></li>
+        <li>|</li>
+        <li><%= link_to 'Bio', about_path %></li>
+        <li>|</li>
+        <li><%= link_to 'Contact', contact_path %></li>
+        <% if @auth.present? %>
+          <li>|</li>
+          <li><%= link_to 'Admin', admin_path %></li>
+          <li>|</li>
+          <li><%= link_to 'Logout', '/login', :method => :delete %></li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+  <div id='login' class="row hide">
+    <div class="nine columns"></div>
+    <div class="three columns">
+      <%= form_tag '/login' do %>
+        <%= label_tag 'email' %>
+        <%= text_field_tag 'email', nil, :autofocus => true %>
+        <%= label_tag 'password' %>
+        <%= password_field_tag 'password' %>
+        <%= submit_tag 'Login', :class => 'button radius tiny' %>
+        <%= link_to('Cancel', '#', :id=>'cancel_login', :class => 'button radius tiny alert') %>
+      <% end %>
+    </div>
+  </div>
+  <%= yield %>
+  <footer class="row">
+    <div class="twelve columns">
+      <hr />
+      <div class="row">
+        <div class="six columns">
+          <p id="copyright">&copy; 2013 Content by David Loncle, Site by <%= link_to 'SMM', 'http://samdec11.github.com', :target => '_blank' %></p>
+        </div>
+        <div class="six columns">
+          <ul class="link-list right">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Paintings', paintings_path %></li>
+            <li><%= link_to 'Works on Paper', paper_path %></li>
+            <li><%= link_to 'Bio', about_path %></li>
+            <li><%= link_to 'Contact', contact_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script type="text/javascript">
+     $(window).load(function() {
+         $('#slider').orbit();
+     });
+  </script>
+
+</body>
+</html>

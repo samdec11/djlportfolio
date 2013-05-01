@@ -1,0 +1,160 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+
+* {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #ddd;
+  height: 100%;
+  margin: 0 0 1px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav section li {
+  display: inline;
+}
+
+li.divider {
+  background-color: #777 !important;
+}
+
+a {
+  color: #666633;
+}
+
+.row {
+  width: 1300px;
+}
+
+p.bio {
+  font-size: 16px;
+  line-height: 1em;
+  text-align: justify;
+}
+
+img.bio {
+  opacity: 0.5;
+}
+
+#bio {
+  margin-top: 0;
+}
+
+hr {
+  border: 1px solid #999;
+  margin: 0;
+}
+
+#copyright {
+  font-size: 10px;
+}
+
+#slider {
+  border: 1px solid #333;
+  img {
+    width: 620px;
+    height: 466px;
+  }
+}
+
+span.right, span.left, .timer {
+  visibility: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+#contact {
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+}
+
+#paintpreview, #paperpreview {
+  width: 500px;
+  height: 390px;
+  margin: 0 auto 20px auto;
+  border: 1px solid #666;
+  background-size: cover;
+}
+
+#paintpreview {
+  background-image: url('bird.jpg');
+}
+
+#soon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+  width: 165px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  top: 50%;
+  cursor: wait;
+}
+
+#disclaimer {
+  font-weight: bold;
+}
+
+.hide {
+  display: hidden;
+}
+
+td {
+  width: 240px;
+}
+
+#email {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.clearing-main-left, .clearing-main-right {
+  display: none;
+}
+
+#container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 700px;
+
+  li {
+    display: inline;
+  }
+}
+
+.item {
+  display: block;
+  width: 200px;
+/*  margin: 10px;*/
+  /*height: 300px;*/
+}
+
+img.admin {
+  width: 200px;
+}
+
+ul.admin {
+  display: inline-block;
+  position: relative;
+  bottom: 100px;
+}

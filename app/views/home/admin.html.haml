@@ -1,0 +1,21 @@
+.row
+  .six.columns
+    %h3 Paintings
+    = link_to 'New Painting', new_painting_path, class: 'button small success', remote: true
+    #paint_form
+    %br
+    %br
+    %ul
+      - @paintings.each do |painting|
+        %li
+          = image_tag painting.image, class: 'admin'
+          %ul.admin
+            %li= "Title: #{painting.name}"
+            %li= "Description: #{painting.description}"
+            %li
+              = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
+              = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
+  .six.columns
+    %h3 Works on Paper
+    = link_to 'New Work', '#', class: 'button small success'
+    #paper_form
