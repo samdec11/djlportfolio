@@ -5,10 +5,11 @@
     #paint_form
     %br
     %br
-    %ul
-      - @paintings.each do |painting|
-        %li
+    - @paintings.each do |painting|
+      .row
+        .six.columns
           = image_tag painting.image, class: 'admin'
+        .six.columns
           %ul.admin
             %li= "Title: #{painting.name}"
             %li= "Description: #{painting.description}"

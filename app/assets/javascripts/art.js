@@ -24,3 +24,8 @@ function arrange_paintings() {
     }
   });
 }
+
+function cancel_form() {
+  $('#paint_form').empty();
+  $('#paper_form').empty();
+}

@@ -16922,3 +16922,96 @@ Processing by PaintingsController#new as JS
   Rendered paintings/new.js.erb (3.1ms)
 Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 21:22:24 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (8.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 164ms (Views: 68.8ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-30 21:22:44 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 21:50:21 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPainting Load (0.6ms)[0m  SELECT "paintings".* FROM "paintings" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  Rendered home/admin.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 48ms (Views: 22.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 21:53:49 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  Rendered home/admin.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 21:55:23 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPainting Load (0.3ms)[0m  SELECT "paintings".* FROM "paintings" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  Rendered home/admin.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 22:02:24 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  Rendered home/admin.html.haml within layouts/application (5.2ms)
+Compiled style.css  (32ms)  (pid 38416)
+Compiled application.css  (5ms)  (pid 38416)
+Completed 200 OK in 109ms (Views: 105.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/paintings/6/edit" for 127.0.0.1 at 2013-04-30 22:03:07 -0400
+Processing by PaintingsController#edit as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", "6"]]
+  Rendered paintings/_form.html.haml (10.5ms)
+  Rendered paintings/new.js.erb (18.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 22:08:43 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPainting Load (0.3ms)[0m  SELECT "paintings".* FROM "paintings" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  Rendered home/admin.html.haml within layouts/application (5.7ms)
+Compiled art.js  (0ms)  (pid 38416)
+Compiled application.js  (10ms)  (pid 38416)
+Completed 200 OK in 118ms (Views: 114.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/paintings/1/edit" for 127.0.0.1 at 2013-04-30 22:08:46 -0400
+Processing by PaintingsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered paintings/_form.html.haml (3.4ms)
+  Rendered paintings/new.js.erb (4.2ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-04-30 22:11:45 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  Rendered home/admin.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.8ms)

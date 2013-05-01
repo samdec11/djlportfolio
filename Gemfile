@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

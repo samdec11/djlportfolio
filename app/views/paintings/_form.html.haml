@@ -2,4 +2,5 @@
   = f.text_field :name, placeholder: 'Name'
   = f.text_area :description, placeholder: 'Description'
   = f.text_field :image, placeholder: 'Image'
+  = button_to_function 'Cancel', 'cancel_form()', class: 'button tiny alert'
   = f.submit nil, class: 'button tiny success'
