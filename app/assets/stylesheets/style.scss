@@ -152,3 +152,11 @@ td {
 img.admin {
   width: 200px;
 }
+
+.visible-img {
+  height: 90%;
+}
+
+.clearing-assembled .clearing-container ul[data-clearing] li img {
+  opacity: 0.2;
+}

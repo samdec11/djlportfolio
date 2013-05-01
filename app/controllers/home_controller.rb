@@ -4,8 +4,6 @@ class HomeController < ApplicationController
   end
   def about
   end
-  def art
-  end
   def paintings
     @paintings = Painting.all
   end
