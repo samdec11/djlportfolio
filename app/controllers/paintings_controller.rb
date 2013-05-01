@@ -19,5 +19,8 @@ class PaintingsController < ApplicationController
     redirect_to(admin_path)
   end
   def destroy
+    painting = Painting.find(params[:id])
+    painting.delete
+    redirect_to(admin_path)
   end
 end

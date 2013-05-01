@@ -18,5 +18,18 @@
               = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
   .six.columns
     %h3 Works on Paper
-    = link_to 'New Work', '#', class: 'button small success'
+    = link_to 'New Work', new_paper_path, class: 'button small success', remote: true
     #paper_form
+    %br
+    %br
+    - @papers.each do |paper|
+      .row
+        .six.columns
+          = image_tag paper.image, class: 'admin'
+        .six.columns
+          %ul.admin
+            %li= "Title: #{paper.name}"
+            %li= "Description: #{paper.description}"
+            %li
+              = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
+              = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert'

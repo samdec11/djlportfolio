@@ -5,6 +5,6 @@ Prototype1::Application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
   get '/admin' => 'home#admin'
-  resources :paintings
+  resources :paintings, :papers
  root :to => 'home#index'
 end

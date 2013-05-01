@@ -1,0 +1,13 @@
+- if @papers.empty?
+  .row
+    .twelve.columns
+      %h3 Coming soon!
+- else
+  .row
+    .twelve.columns
+      %h2 Paper
+      %ul{:'data-clearing'=>true}
+        - @papers.each do |paper|
+          %li
+            %a{:href=>"/assets/#{paper.image}"}
+              = image_tag paper.image, :class => 'papers'

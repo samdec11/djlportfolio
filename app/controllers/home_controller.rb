@@ -14,5 +14,6 @@ class HomeController < ApplicationController
   def admin
     @paintings = Painting.all
     @user = User.first
+    @papers = Paper.all
   end
 end
