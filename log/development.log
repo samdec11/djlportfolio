@@ -18058,3 +18058,898 @@ Processing by HomeController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
   Rendered home/index.html.haml within layouts/application (0.7ms)
 Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 16:51:30 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.7ms)
+Compiled style.css  (40ms)  (pid 4378)
+Compiled application.css  (9ms)  (pid 4378)
+Completed 200 OK in 198ms (Views: 197.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 16:52:16 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Compiled style.css  (25ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 62ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 17:02:19 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Compiled style.css  (23ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 102ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 17:03:25 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Compiled style.css  (23ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 106ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 17:10:44 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 17:10:56 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 17:13:12 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 17:13:44 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (0.5ms)
+Compiled style.css  (26ms)  (pid 4378)
+Compiled application.css  (5ms)  (pid 4378)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-05-06 17:13:54 -0400
+Processing by HomeController#contact as HTML
+  Rendered home/contact.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 17:13:56 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:19:28 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (1.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 86ms (Views: 12.3ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:19:28 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.3ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:26:09 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.5ms)
+Compiled style.css  (21ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:26:10 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.7ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:29:46 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.6ms)
+Compiled style.css  (25ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:29:46 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:33:32 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Compiled style.css  (71ms)  (pid 4378)
+Compiled application.css  (7ms)  (pid 4378)
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:33:33 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.8ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:37:21 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.6ms)
+Compiled style.css  (25ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:37:21 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:37:45 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Compiled style.css  (26ms)  (pid 4378)
+Compiled application.css  (7ms)  (pid 4378)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:37:45 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:40:51 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.5ms)
+Compiled style.css  (26ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:40:51 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:46:17 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:46:18 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:46:24 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.4ms)
+Compiled style.css  (28ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:46:24 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:50:51 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 17:50:52 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:01:05 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 27ms
+
+Sass::SyntaxError - Invalid CSS after "  height": expected ";", was ": 100%;"
+  (in /Users/Sean/Documents/projects/david_loncle/port/app/assets/stylesheets/style.scss):
+  app/assets/stylesheets/style.scss:170:in `'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:1148:in `expected'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:1084:in `expected'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:1079:in `tok!'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:586:in `block in declaration_or_ruleset'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:1122:in `call'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:1122:in `rethrow'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:554:in `block_child'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:546:in `block_contents'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:535:in `block'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:529:in `ruleset'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:553:in `block_child'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:546:in `block_contents'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:82:in `stylesheet'
+  (gem) sass-3.2.8/lib/sass/scss/parser.rb:27:in `parse'
+  (gem) sass-3.2.8/lib/sass/engine.rb:342:in `_to_tree'
+  (gem) sass-3.2.8/lib/sass/engine.rb:315:in `_render'
+  (gem) sass-3.2.8/lib/sass/engine.rb:262:in `render'
+  (gem) sass-rails-3.2.6/lib/sass/rails/template_handlers.rb:106:in `evaluate'
+  (gem) tilt-1.3.7/lib/tilt/template.rb:77:in `render'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:193:in `block in evaluate'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:190:in `each'
+  (gem) sprockets-2.2.2/lib/sprockets/context.rb:190:in `evaluate'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:12:in `initialize'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:249:in `new'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:249:in `block in build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:270:in `circular_call_protection'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:248:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:93:in `block in build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:19:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:44:in `block in init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:37:in `map'
+  (gem) sprockets-2.2.2/lib/sprockets/processed_asset.rb:37:in `init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/asset.rb:24:in `from_hash'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:15:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/bundled_asset.rb:38:in `init_with'
+  (gem) sprockets-2.2.2/lib/sprockets/asset.rb:24:in `from_hash'
+  (gem) sprockets-2.2.2/lib/sprockets/caching.rb:15:in `cache_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:92:in `build_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:169:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/index.rb:60:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/environment.rb:78:in `find_asset'
+  (gem) sprockets-2.2.2/lib/sprockets/base.rb:177:in `[]'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:126:in `asset_for'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:44:in `block in stylesheet_link_tag'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:43:in `collect'
+  (gem) actionpack-3.2.11/lib/sprockets/helpers/rails_helper.rb:43:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___3728015029554970567_70310056092260'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:425:in `_run__1718480969072405901__process_action__2060577792823111113__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/app_request_handler.rb:11:in `call'
+  (gem) rack-contrib-1.1.0/lib/rack/contrib/response_headers.rb:17:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/headers.rb:16:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3310919542903862759__call__3201821961862755053__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/70310041442240/variables" for 127.0.0.1 at 2013-05-06 18:01:05 -0400
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:01:19 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.1ms)
+Compiled style.css  (35ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:01:19 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.6ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:02:23 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Compiled style.css  (28ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:02:23 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.7ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:02:53 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Compiled style.css  (33ms)  (pid 4378)
+Compiled application.css  (9ms)  (pid 4378)
+Completed 200 OK in 131ms (Views: 128.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:02:54 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:09:08 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Compiled style.css  (26ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 114ms (Views: 111.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:09:09 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:09:46 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.7ms)
+Compiled style.css  (34ms)  (pid 4378)
+Compiled application.css  (7ms)  (pid 4378)
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:09:47 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:21:45 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.7ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (7ms)  (pid 4378)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:21:45 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:25:04 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.5ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:25:04 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:02 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (3.1ms)
+Compiled style.css  (70ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 109ms (Views: 107.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:03 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:10 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.5ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 113ms (Views: 110.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:10 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:18 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.3ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:27:19 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:28:33 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.4ms)
+Compiled style.css  (26ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:28:33 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:32:27 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:32:27 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:33:18 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:33:19 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:35:04 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:35:05 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:35:41 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:35:41 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (1.2ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-05-06 18:41:40 -0400
+Processing by HomeController#contact as HTML
+  Rendered home/contact.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 18:41:44 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:44:20 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 18:44:20 -0400
+Processing by PaintingsController#index as */*
+  [1m[36mPainting Load (1.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 18:46:29 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:48:41 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:49:41 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Compiled style.css  (41ms)  (pid 4378)
+Compiled application.css  (7ms)  (pid 4378)
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:51:01 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 114ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:51:28 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Compiled style.css  (28ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:51:49 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Compiled style.css  (27ms)  (pid 4378)
+Compiled application.css  (6ms)  (pid 4378)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:52:20 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:53:31 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError - undefined method `each' for #<Class:0x007fe4aa41e420>:
+  (gem) activerecord-3.2.11/lib/active_record/dynamic_matchers.rb:55:in `method_missing'
+  app/views/home/index.html.haml:4:in `_app_views_home_index_html_haml___46391043734768643_70310073138760'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:425:in `_run__3352182177431182821__process_action__2060577792823111113__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/app_request_handler.rb:11:in `call'
+  (gem) rack-contrib-1.1.0/lib/rack/contrib/response_headers.rb:17:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/headers.rb:16:in `call'
+  (gem) meta_request-0.2.3/lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3310919542903862759__call__3201821961862755053__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.8.0/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.1/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.5/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70310041140200/variables" for 127.0.0.1 at 2013-05-06 18:53:31 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 18:53:41 -0400
+Processing by HomeController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered home/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 19:01:07 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  Rendered paintings/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-05-06 19:01:07 -0400
+Processing by PaintingsController#index as */*
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered paintings/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-05-06 19:01:10 -0400
+Processing by PapersController#index as HTML
+  [1m[36mPaper Load (2.4ms)[0m  [1mSELECT "papers".* FROM "papers" [0m
+  Rendered papers/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-05-06 19:01:11 -0400
+Processing by HomeController#about as HTML
+  Rendered home/about.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-05-06 19:01:12 -0400
+Processing by HomeController#contact as HTML
+  Rendered home/contact.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-06 19:01:14 -0400
+Processing by HomeController#index as HTML
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" 
+  Rendered home/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.4ms)

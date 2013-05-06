@@ -1,8 +1,10 @@
 .row
   .twelve.columns
     %h2 Paintings
+.row
+  .eleven.centered.columns
     %ul{:'data-clearing'=>true}
       - @paintings.each do |painting|
-        %li
+        %li.paintings
           %a{:href=>"/assets/#{painting.image}"}
             = image_tag painting.image, :class => 'paintings'

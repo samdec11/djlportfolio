@@ -1,8 +1,8 @@
 .row
-  .six.columns
-    %h2 Welcome to David Loncle's Portfolio
-  .six.columns
+  .five.centered.columns
     #slider
-      = image_tag 'paintings/painting1.jpg'
-      = image_tag 'paintings/painting2.jpg'
-      = image_tag 'paintings/painting3.jpg'
+      - Painting.all.each do |painting|
+        = image_tag painting.image
+      / = image_tag 'paintings/painting1.jpg'
+      / = image_tag 'paintings/painting3.jpg'
+      / = image_tag 'paintings/painting4.jpg'
