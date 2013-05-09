@@ -1,5 +1,5 @@
 .row
-  .six.columns
+  .four.columns
     %h3 Paintings
     = link_to 'New Painting', new_painting_path, class: 'button small success', remote: true
     #paint_form
@@ -16,7 +16,7 @@
             %li
               = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
               = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
-  .six.columns
+  .four.columns
     %h3 Works on Paper
     = link_to 'New Work', new_paper_path, class: 'button small success', remote: true
     #paper_form
@@ -33,3 +33,20 @@
             %li
               = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
               = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert'
+  .four.columns
+    %h3 Links
+    = link_to 'New Link', new_link_path, class: 'button small success', remote: true
+    #link_form
+    %br
+    %br
+    - @links.each do |link|
+      .row
+        .six.columns
+          = link_to link.display, link.address, target: 'blank'
+        .six.columns
+          %ul.admin
+            %li= "Display Text: #{link.display}"
+            %li= "Web Address: #{link.address}"
+            %li
+              = link_to 'Edit', edit_link_path(link.id), class: 'button tiny', remote: true
+              = link_to 'Delete', link, :method => :delete, class: 'button tiny alert'

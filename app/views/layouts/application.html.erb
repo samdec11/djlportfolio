@@ -29,6 +29,8 @@
         <li><%= link_to 'Bio', about_path %></li>
         <li>|</li>
         <li><%= link_to 'Contact', contact_path %></li>
+        <li>|</li>
+        <li><%= link_to 'Links', links_path %></li>
         <% if @auth.present? %>
           <li>|</li>
           <li><%= link_to 'Admin', admin_path %></li>
@@ -57,7 +59,7 @@
       <hr />
       <div class="row">
         <div class="six columns">
-          <p id="copyright">&copy; 2013 Content by David Loncle, Site by <%= link_to 'SMM', 'http://samdec11.github.com', :target => '_blank' %></p>
+          <p id="copyright">&copy; 2013 Content by David Loncle, Photography by Jonathan Loncle, Site by <%= link_to 'SMM', 'http://seanmm.com', :target => '_blank' %></p>
         </div>
         <div class="six columns">
           <ul class="link-list right">

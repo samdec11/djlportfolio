@@ -8,6 +8,7 @@ class PapersController < ApplicationController
   end
   def create
     Paper.create(params[:paper])
+    redirect_to(admin_path)
   end
   def edit
     @paper = Paper.find(params[:id])

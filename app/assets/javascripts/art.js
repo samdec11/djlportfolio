@@ -6,7 +6,7 @@ $(function() {
 });
 
 function show_login(event) {
-  if(event.which == 108) {
+  if(event.which == 96) {
     $('#login').show();
   }
 }
@@ -28,4 +28,5 @@ function arrange_paintings() {
 function cancel_form() {
   $('#paint_form').empty();
   $('#paper_form').empty();
+  $('#link_form').empty();
 }

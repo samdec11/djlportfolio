@@ -8,6 +8,7 @@ class PaintingsController < ApplicationController
   end
   def create
     Painting.create(params[:painting])
+    redirect_to(admin_path)
   end
   def edit
     @painting = Painting.find(params[:id])

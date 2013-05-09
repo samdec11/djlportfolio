@@ -1,0 +1,5 @@
+= form_for @link do |f|
+  = f.text_field :display, placeholder: 'Display Text'
+  = f.text_field :address, placeholder: 'Web Address'
+  = button_to_function 'Cancel', 'cancel_form()', class: 'button tiny alert'
+  = f.submit nil, class: 'button tiny success'

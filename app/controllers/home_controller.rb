@@ -15,5 +15,6 @@ class HomeController < ApplicationController
     @paintings = Painting.all
     @user = User.first
     @papers = Paper.all
+    @links = Link.all
   end
 end
