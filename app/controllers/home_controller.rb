@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
   end
   def about
+    @user = User.first
   end
   def paintings
     @paintings = Painting.all
@@ -10,10 +11,11 @@ class HomeController < ApplicationController
   def paper
   end
   def contact
+    @user = User.first
   end
   def admin
-    @paintings = Painting.all
     @user = User.first
+    @paintings = Painting.all
     @papers = Paper.all
     @links = Link.all
   end

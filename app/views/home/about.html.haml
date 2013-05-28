@@ -1,7 +1,7 @@
 .row
   .seven.columns
     %h2 Artist Statement
-    %p.bio I believe in aspiring.  That endeavor yields being; evinces the assertion of life; circumvents the caprice of society and culture.  Art’s triumph is the vessel and fanfare of humanity; it rejects what binds and gestures us to the soul-sung loving in dream. The valence of experience reveals our starting, and the ever beginning molds our living.  Where is where when only we leap.
+    %p.bio= @user.artist_statement
     %h2 Exhibition History
     %h5 Solo Exhibitions
     %table
@@ -64,4 +64,4 @@
         %td Teaching Artist
         %td= " "
   .five.columns
-    = image_tag 'headshot.jpg', :class => 'bio'
+    = image_tag @user.bio_image, :class => 'bio'
