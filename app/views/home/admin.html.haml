@@ -1,20 +1,4 @@
 .row
-  .six.columns
-    %h3 Bio
-    #bio_form
-    %br
-    %br
-    .row
-      .six.columns
-        %p= @user.artist_statement
-        = image_tag @user.bio_image
-      .six.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
-  .six.columns
-    %h3 Contact
-.row
   .four.columns
     %h3 Paintings
     = link_to 'New Painting', new_painting_path, class: 'button small success', remote: true
@@ -66,3 +50,21 @@
             %li
               = link_to 'Edit', edit_link_path(link.id), class: 'button tiny', remote: true
               = link_to 'Delete', link, :method => :delete, class: 'button tiny alert'
+.row
+  .twelve.columns
+    %h3 General
+    #general_form
+    %br
+    %br
+    .row
+      .nine.columns
+        %h5 Artist Statement
+        %p= @user.artist_statement
+        %h5 Bio Image
+        = image_tag @user.bio_image
+        %h5 Contact Image
+        = image_tag @user.contact_image
+      .three.columns
+        %ul.admin
+          %li
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true

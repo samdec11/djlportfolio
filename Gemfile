@@ -6,6 +6,10 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
 gem 'thin'
+gem 'carrierwave'
+gem 'fog'
+gem 'rmagick'
+gem 'remotipart'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

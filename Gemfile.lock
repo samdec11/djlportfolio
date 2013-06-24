@@ -38,6 +38,9 @@ GEM
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -57,8 +60,20 @@ GEM
     debugger-ruby_core_source (1.2.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.23.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fog (1.12.1)
+      builder
+      excon (~> 0.23.0)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0)
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.4)
     haml (4.0.2)
       tilt
     hike (1.2.2)
@@ -78,6 +93,10 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.2)
+    net-scp (1.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.7)
+    nokogiri (1.5.10)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.1)
@@ -121,6 +140,9 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    remotipart (1.0.5)
+    rmagick (2.13.2)
+    ruby-hmac (0.4.0)
     sass (3.2.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -154,7 +176,9 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   binding_of_caller
+  carrierwave
   coffee-rails (~> 3.2.1)
+  fog
   haml
   jquery-rails
   meta_request
@@ -164,6 +188,8 @@ DEPENDENCIES
   pry-stack_explorer
   quiet_assets
   rails (= 3.2.11)
+  remotipart
+  rmagick
   sass-rails (~> 3.2.3)
   thin
   uglifier (>= 1.0.3)
