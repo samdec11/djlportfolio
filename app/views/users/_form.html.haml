@@ -1,0 +1,11 @@
+= form_for @user do |f|
+  = f.label :artist_statement
+  = f.text_area :artist_statement
+  = f.label :bio_image
+  = f.file_field :bio_image
+  = f.text_field :remote_bio_image_url
+  = f.label :contact_image
+  = f.file_field :contact_image
+  = f.text_field :remote_contact_image_url
+  = button_to_function 'Cancel', 'cancel_form()', class: 'button tiny alert'
+  = f.submit nil, class: 'button tiny success'

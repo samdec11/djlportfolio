@@ -29,4 +29,5 @@ function cancel_form() {
   $('#paint_form').empty();
   $('#paper_form').empty();
   $('#link_form').empty();
+  $('#general_form').empty();
 }

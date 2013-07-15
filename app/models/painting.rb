@@ -12,5 +12,5 @@
 
 class Painting < ActiveRecord::Base
   attr_accessible :name, :image, :description, :remote_image_url
-  mount_uploader :image, PaintingUploader
+  mount_uploader :image, PicUploader
 end
