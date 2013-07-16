@@ -24453,3 +24453,85 @@ Processing by PaintingsController#index as HTML
   Rendered shared/_list.html.haml (16.6ms)
   Rendered paintings/index.html.haml within layouts/application (18.1ms)
 Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-15 20:27:28 -0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o447lhF2f3pIqcdu2dvZuvD953HWfMEC4PLJLzM1KM4=", "email"=>"david.loncle@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'david.loncle@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 181ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-15 20:27:28 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mPainting Load (0.2ms)[0m  [1mSELECT "paintings".* FROM "paintings" [0m
+  [1m[35mPaper Load (0.7ms)[0m  SELECT "papers".* FROM "papers" 
+  [1m[36mLink Load (0.8ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  Rendered home/admin.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 67ms (Views: 34.8ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2013-07-15 20:28:18 -0400
+Processing by UsersController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered users/_form.html.haml (13.1ms)
+  Rendered users/edit.js.erb (14.7ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-15 20:32:15 -0400
+Processing by LinksController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  Rendered links/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-15 20:33:19 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  Rendered home/about.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.8ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePaintingsTable (20130430130937)
+Migrating to CreateUsersTable (20130430131347)
+Migrating to CreatePapersTable (20130501040419)
+Migrating to CreateLinksTable (20130509184453)
+Migrating to AddColumnsToUsersTable (20130523105921)
+Migrating to CreateExhibitionsTable (20130716003818)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePaintingsTable (20130430130937)
+Migrating to CreateUsersTable (20130430131347)
+Migrating to CreatePapersTable (20130501040419)
+Migrating to CreateLinksTable (20130509184453)
+Migrating to AddColumnsToUsersTable (20130523105921)
+Migrating to CreateExhibitionsTable (20130716003818)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (25.8ms)[0m  [1mCREATE TABLE "exhibitions" ("id" serial primary key, "kind" character varying(255), "first_column" character varying(255), "second_column" character varying(255), "third_column" character varying(255), "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130716003818')
+  [1m[36m (116.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSchoolsTable (20130716003854)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE "schools" ("id" serial primary key, "first_column" character varying(255), "second_column" character varying(255), "third_column" character varying(255), "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130716003854')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeachingPositionsTable (20130716003921)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "teaching_positions" ("id" serial primary key, "first_column" character varying(255), "second_column" character varying(255), "third_column" character varying(255), "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130716003921')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml

@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :artist_statement, :bio_image, :remote_bio_image_url, :contact_image, :remote_contact_image_url
   mount_uploader :bio_image, PicUploader
   mount_uploader :contact_image, PicUploader
+
+  has_many :exhibitions, :inverse_of => :user
+  has_many :schools, :inverse_of => :user
+  has_many :teaching_positions, :inverse_of => :user
 end

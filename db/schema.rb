@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523105921) do
+ActiveRecord::Schema.define(:version => 20130716003921) do
+
+  create_table "exhibitions", :force => true do |t|
+    t.string   "kind"
+    t.string   "first_column"
+    t.string   "second_column"
+    t.string   "third_column"
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "links", :force => true do |t|
     t.string   "display"
@@ -34,6 +44,24 @@ ActiveRecord::Schema.define(:version => 20130523105921) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "schools", :force => true do |t|
+    t.string   "first_column"
+    t.string   "second_column"
+    t.string   "third_column"
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "teaching_positions", :force => true do |t|
+    t.string   "first_column"
+    t.string   "second_column"
+    t.string   "third_column"
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|
