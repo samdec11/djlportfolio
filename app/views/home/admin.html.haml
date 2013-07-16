@@ -58,13 +58,53 @@
     %br
     .row
       .nine.columns
-        %h5 Artist Statement
+        %h4 Artist Statement
         %p= @user.artist_statement
-        %h5 Bio Image
+        %h4 Bio Image
         = image_tag @user.bio_image
-        %h5 Contact Image
+        %h4 Contact Image
         = image_tag @user.contact_image
       .three.columns
         %ul.admin
           %li
             = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+.row
+  .twelve.columns
+    %h3 Bio Info
+    #bio_form
+    %br
+    %br
+    .row
+      .nine.columns
+        %h4 Exhibition History
+        %h5 Solo Exhibitions
+        = render :partial => "/shared/table", :locals => {:info => @solos}
+      .three.columns
+        %ul.admin
+          %li
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+    .row
+      .nine.columns
+        %h5 Selected Group Shows
+        = render :partial => "/shared/table", :locals => {:info => @groups}
+      .three.columns
+        %ul.admin
+          %li
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+    .row
+      .nine.columns
+        %h4 Education
+        = render :partial => "/shared/table", :locals => {:info => @schools}
+      .three.columns
+        %ul.admin
+          %li
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+    .row
+      .nine.columns
+        %h4 Teaching Positions
+        = render :partial => "/shared/table", :locals => {:info => @positions}
+      .three.columns
+        %ul.admin
+          %li
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+        

@@ -18,5 +18,9 @@ class HomeController < ApplicationController
     @paintings = Painting.all
     @papers = Paper.all
     @links = Link.all
+    @solos = Exhibition.solo
+    @groups = Exhibition.group
+    @schools = School.all
+    @positions = TeachingPosition.all
   end
 end

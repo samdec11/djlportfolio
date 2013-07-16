@@ -16,4 +16,12 @@ class Exhibition < ActiveRecord::Base
   attr_accessible :kind, :first_column, :second_column, :third_column
   
   belongs_to :user, :inverse_of => :exhibitions
+
+  def self.solo
+    Exhibition.where(:kind => "solo")
+  end
+
+  def self.group
+    Exhibition.where(:kind => "group")
+  end
 end
