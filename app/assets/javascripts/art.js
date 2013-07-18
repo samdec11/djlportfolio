@@ -1,8 +1,7 @@
 $(function() {
   $(document).keypress(show_login);
   $('#cancel_login').click(hide_login);
-  arrange_paintings();
-  // $('#container').isotope('layout', '.item');
+  $('.best_in_place').best_in_place();
 });
 
 function show_login(event) {
@@ -13,16 +12,6 @@ function show_login(event) {
 
 function hide_login() {
   $('#login').hide();
-}
-
-function arrange_paintings() {
-  $('#container').isotope({
-    // itemSelector : '.item',
-    // layoutMode : 'fitRows'
-    masonryHorizontal: {
-      rowHeight: 216
-    }
-  });
 }
 
 function cancel_form() {

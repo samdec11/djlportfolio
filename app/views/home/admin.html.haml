@@ -57,17 +57,27 @@
     %br
     %br
     .row
-      .nine.columns
+      .twelve.columns
         %h4 Artist Statement
-        %p= @user.artist_statement
-        %h4 Bio Image
+        = best_in_place @user, :artist_statement, :type => :textarea
+    .row
+      .twelve.columns
+        %h4 
+          Bio Image
+          = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+    .row
+      .nine.centered.columns
         = image_tag @user.bio_image
-        %h4 Contact Image
+      .three.columns
+    .row
+      .twelve.columns
+        %h4 
+          Contact Image
+          = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+    .row
+      .nine.centered.columns
         = image_tag @user.contact_image
       .three.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
 .row
   .twelve.columns
     %h3 Bio Info
@@ -75,36 +85,20 @@
     %br
     %br
     .row
-      .nine.columns
+      .twelve.columns
         %h4 Exhibition History
         %h5 Solo Exhibitions
         = render :partial => "/shared/table", :locals => {:info => @solos}
-      .three.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
     .row
-      .nine.columns
+      .twelve.columns
         %h5 Selected Group Shows
         = render :partial => "/shared/table", :locals => {:info => @groups}
-      .three.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
     .row
-      .nine.columns
+      .twelve.columns
         %h4 Education
         = render :partial => "/shared/table", :locals => {:info => @schools}
-      .three.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
     .row
-      .nine.columns
+      .twelve.columns
         %h4 Teaching Positions
         = render :partial => "/shared/table", :locals => {:info => @positions}
-      .three.columns
-        %ul.admin
-          %li
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
         
