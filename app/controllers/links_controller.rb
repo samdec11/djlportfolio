@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   before_filter :ensure_admin, :except => [:index]
   def index
-    @links = Link.all
+    @links = Link.order(:created_at)
   end
   def new
     @link = Link.new

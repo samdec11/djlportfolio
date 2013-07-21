@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716003921) do
+ActiveRecord::Schema.define(:version => 20130721210124) do
 
   create_table "exhibitions", :force => true do |t|
     t.string   "kind"
     t.string   "first_column"
     t.string   "second_column"
     t.string   "third_column"
-    t.integer  "user_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -50,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20130716003921) do
     t.string   "first_column"
     t.string   "second_column"
     t.string   "third_column"
-    t.integer  "user_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -59,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20130716003921) do
     t.string   "first_column"
     t.string   "second_column"
     t.string   "third_column"
-    t.integer  "user_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

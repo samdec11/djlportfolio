@@ -1,7 +1,7 @@
 class PaintingsController < ApplicationController
   before_filter :ensure_admin, :except => [:index]
   def index
-    @paintings = Painting.all
+    @paintings = Painting.order(:created_at)
   end
   def new
     @painting = Painting.new

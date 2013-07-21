@@ -53,52 +53,51 @@
 .row
   .twelve.columns
     %h3 General
-    #general_form
-    %br
-    %br
     .row
       .twelve.columns
         %h4 Artist Statement
         = best_in_place @user, :artist_statement, :type => :textarea
     .row
-      .twelve.columns
+      .six.columns
         %h4 
           Bio Image
           = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
-    .row
-      .nine.centered.columns
-        = image_tag @user.bio_image
-      .three.columns
-    .row
-      .twelve.columns
+        #bio_image_form
+        .twelve.columns
+          = image_tag @user.bio_image
+      .six.columns
         %h4 
           Contact Image
           = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
-    .row
-      .nine.centered.columns
-        = image_tag @user.contact_image
-      .three.columns
+        #contact_image_form
+        .twleve.columns
+          = image_tag @user.contact_image
 .row
   .twelve.columns
     %h3 Bio Info
-    #bio_form
-    %br
-    %br
     .row
       .twelve.columns
         %h4 Exhibition History
-        %h5 Solo Exhibitions
+        %h5 
+          Solo Exhibitions
+          = link_to 'New', solo_new_exhibition_path, class: 'button tiny success', remote: true
         = render :partial => "/shared/table", :locals => {:info => @solos}
     .row
       .twelve.columns
-        %h5 Selected Group Shows
+        %h5 
+          Selected Group Shows
+          = link_to 'New', group_new_exhibition_path, class: 'button tiny success', remote: true
         = render :partial => "/shared/table", :locals => {:info => @groups}
     .row
       .twelve.columns
-        %h4 Education
+        %h4 
+          Education
+          = link_to 'New', new_school_path, class: 'button small success', remote: true
         = render :partial => "/shared/table", :locals => {:info => @schools}
     .row
       .twelve.columns
-        %h4 Teaching Positions
+        %h4 
+          Teaching Positions
+          = link_to 'New', new_teaching_position_path, class: 'button small success', remote: true
         = render :partial => "/shared/table", :locals => {:info => @positions}
         

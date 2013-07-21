@@ -1,7 +1,7 @@
 class PapersController < ApplicationController
   before_filter :ensure_admin, :except => [:index]
   def index
-    @papers = Paper.all
+    @papers = Paper.order(:created_at)
   end
   def new
     @paper = Paper.new

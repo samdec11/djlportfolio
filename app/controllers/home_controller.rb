@@ -15,12 +15,12 @@ class HomeController < ApplicationController
   end
   def admin
     @user = User.first
-    @paintings = Painting.all
-    @papers = Paper.all
-    @links = Link.all
-    @solos = Exhibition.solo
-    @groups = Exhibition.group
-    @schools = School.all
-    @positions = TeachingPosition.all
+    @paintings = Painting.order(:created_at)
+    @papers = Paper.order(:created_at)
+    @links = Link.order(:created_at)
+    @solos = Exhibition.solo.order(:created_at)
+    @groups = Exhibition.group.order(:created_at)
+    @schools = School.order(:created_at)
+    @positions = TeachingPosition.order(:created_at)
   end
 end
