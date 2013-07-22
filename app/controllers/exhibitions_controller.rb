@@ -10,8 +10,9 @@ class ExhibitionsController < ApplicationController
 
   def create
     Exhibition.create(params[:exhibition], kind: params[:kind])
+    redirect_to(admin_path)
   end
-  
+
   def edit
     @exhibition = Exhibition.find(params[:id])
     render :new
