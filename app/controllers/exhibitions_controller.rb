@@ -9,7 +9,8 @@ class ExhibitionsController < ApplicationController
   end
 
   def create
-    Exhibition.create(params[:exhibition], kind: params[:kind])
+    ex = Exhibition.create(params[:exhibition])
+    ex.update_attributes(kind: params[:kind])
     redirect_to(admin_path)
   end
 
