@@ -1,5 +1,7 @@
 class ExhibitionsController < ApplicationController
   before_filter :ensure_admin
+  respond_to :html, :json
+
   def solo
     @solo = Exhibition.new
   end
@@ -19,9 +21,9 @@ class ExhibitionsController < ApplicationController
     render :new
   end
   def update
-    exhibition = Exhibition.find(params[:id])
-    exhibition.update_attributes(params[:exhibition])
-    redirect_to(admin_path)
+    @exhibition = Exhibition.find(params[:id])
+    @exhibition.update_attributes(params[:exhibition])
+    respond_with @exhibition
   end
   def destroy
     exhibition = Exhibition.find(params[:id])

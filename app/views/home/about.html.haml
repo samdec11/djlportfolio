@@ -5,64 +5,32 @@
     %h2 Exhibition History
     %h5 Solo Exhibitions
     %table
-      %tr
-        %td "Consumed by White"
-        %td November 2012
-        %td Snug Harbor Cultural Center, Art Lab Exhibit Gallery
+      - @solos.each do |solo|
+        %tr
+          %td= solo.first_column
+          %td= solo.second_column
+          %td= solo.third_column
     %h5 Selected Group Shows
     %table
-      %tr
-        %td "The Fifth Annual Open Show"
-        %td January 2012
-        %td Art Lab, Snug Harbor Cultural Center
-      %tr
-        %td "Annual Invitational"
-        %td July 2012
-        %td Art Lab, Snug Harbor Cultural Center
-      %tr
-        %td "Small Works Invitational"
-        %td November 2011
-        %td The Painting Center
-      %tr
-        %td "Black and White" (Juried)
-        %td July 2011
-        %td Brooklyn Waterfront, Artist Coalition
-      %tr
-        %td "Coming Round, Searching for Expression in the Mind's Eye"
-        %td February 2011
-        %td Second Saturday Gallery
-      %tr
-        %td "2010 B.C." (Catalogue)
-        %td May 2010
-        %td Williamsburg Art & Historical Center
+      - @groups.each do |group|
+        %tr
+          %td= group.first_column
+          %td= group.second_column
+          %td= group.third_column
     %h2 Education
     %table
-      %tr
-        %td Brooklyn College/CUNY
-        %td 2008-2010
-        %td Master of Fine Arts
-      %tr
-        %td College of Staten Island
-        %td 2002-2007
-        %td Bachelor of Arts in Fine Art CUNY (cum laude)
+      - @schools.each do |school|
+        %tr
+          %td= school.first_column
+          %td= school.second_column
+          %td= school.third_column
     %h2 Teaching Positions
     %table
-      %tr
-        %td College of Staten Island/CUNY
-        %td Adjunct Assistant Professor
-        %td Studio Art
-      %tr
-        %td Art Lab, Snug Harbor Cultural Center
-        %td Teaching Artist
-        %td Studio Art
-      %tr
-        %td Art Lab, Snug Harbor Cultural Center
-        %td Teaching Artist
-        %td Camp Picasso
-      %tr
-        %td Liberty Partnership Program/CUNY
-        %td Teaching Artist
-        %td= " "
+      - @teachings.each do |teach|
+        %tr
+          %td= teach.first_column
+          %td= teach.second_column
+          %td= teach.third_column
   .five.columns
     - cache 'bio_image' do
       = image_tag @user.bio_image, :class => 'bio'

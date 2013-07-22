@@ -1,5 +1,7 @@
 class SchoolsController < ApplicationController
   before_filter :ensure_admin
+  respond_to :html, :json
+
   def new
     @school = School.new
   end
@@ -12,9 +14,9 @@ class SchoolsController < ApplicationController
     render :new
   end
   def update
-    school = School.find(params[:id])
-    school.update_attributes(params[:school])
-    redirect_to(admin_path)
+    @school = School.find(params[:id])
+    @school.update_attributes(params[:school])
+    respond_with @school
   end
   def destroy
     school = School.find(params[:id])

@@ -28389,3 +28389,528 @@ Write fragment views/admin_contact_image (2.2ms)
   Rendered shared/_table.html.haml (1.1ms)
   Rendered home/admin.html.haml within layouts/application (29.0ms)
 Completed 200 OK in 44ms (Views: 37.7ms | ActiveRecord: 2.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-21 23:58:32 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.2ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image (0.3ms)
+Read fragment views/admin_contact_image (0.1ms)
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (13.3ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.3ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at[0m
+  Rendered shared/_table.html.haml (12.5ms)
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at
+  Rendered shared/_table.html.haml (4.8ms)
+  Rendered home/admin.html.haml within layouts/application (105.9ms)
+Completed 200 OK in 173ms (Views: 108.1ms | ActiveRecord: 12.4ms)
+
+
+Started PUT "/schools/1" for 127.0.0.1 at 2013-07-21 23:58:43 -0400
+Processing by SchoolsController#update as JSON
+  Parameters: {"school"=>{"first_column"=>"Brooklyn College/CUNY1"}, "authenticity_token"=>"U5+HgV/8qFFgfgwxqMvrKlwR3r9xvNtrWYfUKoHSAlg=", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSchool Load (0.6ms)[0m  SELECT "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "schools" SET "first_column" = 'Brooklyn College/CUNY1', "updated_at" = '2013-07-22 03:58:43.216861' WHERE "schools"."id" = 1
+  [1m[36m (124.5ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 145ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/schools/1" for 127.0.0.1 at 2013-07-21 23:58:50 -0400
+Processing by SchoolsController#update as JSON
+  Parameters: {"school"=>{"first_column"=>"Brooklyn College/CUNY"}, "authenticity_token"=>"U5+HgV/8qFFgfgwxqMvrKlwR3r9xvNtrWYfUKoHSAlg=", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "schools" SET "first_column" = 'Brooklyn College/CUNY', "updated_at" = '2013-07-22 03:58:50.276586' WHERE "schools"."id" = 1[0m
+  [1m[35m (2.4ms)[0m  COMMIT
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms)
+Expire fragment views/admin_paintings (0.5ms)
+Expire fragment views/admin_bio_image (0.5ms)
+Expire fragment views/admin_contact_image (0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 00:00:48 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Write fragment views/admin_paintings (2.6ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image (0.1ms)
+Write fragment views/admin_bio_image (2.9ms)
+Read fragment views/admin_contact_image (0.1ms)
+Write fragment views/admin_contact_image (2.3ms)
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (13.2ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at[0m
+  Rendered shared/_table.html.haml (13.3ms)
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at
+  Rendered shared/_table.html.haml (4.1ms)
+  Rendered home/admin.html.haml within layouts/application (82.2ms)
+Completed 200 OK in 192ms (Views: 81.5ms | ActiveRecord: 14.3ms)
+
+
+Started PUT "/exhibitions/1" for 127.0.0.1 at 2013-07-22 00:01:21 -0400
+Processing by ExhibitionsController#update as JSON
+  Parameters: {"exhibition"=>{"first_column"=>"\"Consumed by White1\""}, "authenticity_token"=>"U5+HgV/8qFFgfgwxqMvrKlwR3r9xvNtrWYfUKoHSAlg=", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mExhibition Load (0.7ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.0ms)[0m  UPDATE "exhibitions" SET "first_column" = '"Consumed by White1"', "updated_at" = '2013-07-22 04:01:21.700180' WHERE "exhibitions"."id" = 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/exhibitions/1" for 127.0.0.1 at 2013-07-22 00:01:26 -0400
+Processing by ExhibitionsController#update as JSON
+  Parameters: {"exhibition"=>{"first_column"=>"\"Consumed by White\""}, "authenticity_token"=>"U5+HgV/8qFFgfgwxqMvrKlwR3r9xvNtrWYfUKoHSAlg=", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "exhibitions" SET "first_column" = '"Consumed by White"', "updated_at" = '2013-07-22 04:01:26.012514' WHERE "exhibitions"."id" = 1[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:14:50 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+ERROR: compiling _app_views_home_about_html_haml__259944069086781886_70274371630220 RAISED /Users/Sean/Documents/projects/david_loncle/port/app/views/home/about.html.haml:37: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/Sean/Documents/projects/david_loncle/port/app/views/home/about.html.haml:40: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_home_about_html_haml__259944069086781886_70274371630220(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "home/about";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<div class='row'>\n  <div class='seven columns'>\n    <h2>Artist Statement</h2>\n    <p class='bio'>#{_hamlout.adjust_tabs(3); 
+
+
+_hamlout.format_script_false_true_false_true_false_true_false((@user.artist_statement
+));}</p>\n    <h2>Exhibition History</h2>\n    <h5>Solo Exhibitions</h5>\n    <table>\n", 1, false);
+
+
+ @solos.each do |solo|
+_hamlout.push_text("      <tr>\n        <td>solo.first_column</td>\n        <td>solo.second_column</td>\n        <td>solo.third_column</td>\n      </tr>\n", 0, false);end;_hamlout.push_text("    </table>\n    <h5>Selected Group Shows</h5>\n    <table>\n", 0, false);
+
+
+
+
+
+ @groups.each do |group|
+_hamlout.push_text("      <tr>\n        <td>group.first_column</td>\n        <td>group.second_column</td>\n        <td>group.third_column</td>\n      </tr>\n", 0, false);end;_hamlout.push_text("    </table>\n    <h2>Education</h2>\n    <table>\n", 0, false);
+
+
+
+
+
+ @schools.each do |school|
+_hamlout.push_text("      <tr>\n        <td>school.first_column</td>\n        <td>school.second_column</td>\n        <td>school.third_column</td>\n      </tr>\n", 0, false);end;_hamlout.push_text("    </table>\n    <h2>Teaching Positions</h2>\n    <table>\n", 0, false);
+
+
+
+
+
+ @teachings.each do |teach|
+_hamlout.push_text("      <tr>\n        <td>teach.first_column</td>\n        <td>teach.second_column</td>\n        <td>teach.third_column</td>\n      </tr>\n    </table>\n  </div>\n  <div class='five columns'>\n", -1, false);
+
+
+
+
+ cache 'bio_image' do
+_hamlout.push_text("    #{_hamlout.format_script_false_false_false_true_false_true_false(( image_tag @user.bio_image, :class => 'bio'
+));}\n", 0, false);end;_hamlout.push_text("  </div>\n</div>\n", -2, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/remotipart-1.2.1/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:425:in `_run__223790765325938289__process_action__1797402004988684491__callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-contrib-1.1.0/lib/rack/contrib/response_headers.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/headers.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__351175323514062776__call__1811249196019435725__callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:84:in `protected_app_call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:79:in `better_errors_call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:54:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:50:in `tap'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+  Rendered home/about.html.haml within layouts/application (8.8ms)
+Completed 500  in 128ms
+
+SyntaxError - /Users/Sean/Documents/projects/david_loncle/port/app/views/home/about.html.haml:37: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/Sean/Documents/projects/david_loncle/port/app/views/home/about.html.haml:40: syntax error, unexpected $end, expecting keyword_end:
+  app/views/home/about.html.haml:37:in `'
+  actionpack (3.2.11) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.11) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.11) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.11) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__223790765325938289__process_action__1797402004988684491__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__351175323514062776__call__1811249196019435725__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70274410390440/variables" for 127.0.0.1 at 2013-07-22 00:14:50 -0400
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:15:09 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.7ms)
+  Rendered home/about.html.haml within layouts/application (33.5ms)
+Completed 200 OK in 47ms (Views: 35.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:15:34 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.2ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.2ms)
+  Rendered home/about.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 91ms (Views: 85.9ms | ActiveRecord: 2.0ms)
+Connecting to database specified by database.yml
+Expire fragment views/bio_image (4.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:16:23 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.1ms)
+Write fragment views/bio_image (3.0ms)
+  Rendered home/about.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 25ms (Views: 19.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:16:54 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/slider (0.2ms)
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:17:01 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:17:01 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/paintings (0.3ms)
+  Rendered paintings/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:17:10 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.2ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  [1m[36mTeachingPosition Load (0.2ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (2.5ms)
+  Rendered home/about.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-07-22 00:17:13 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/contact_image (2.1ms)
+  Rendered home/contact.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 00:17:29 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.4ms)
+Read fragment views/admin_papers (0.2ms)
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image (0.4ms)
+Read fragment views/admin_contact_image (0.4ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (4.3ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (4.0ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 61ms (Views: 36.3ms | ActiveRecord: 4.9ms)
