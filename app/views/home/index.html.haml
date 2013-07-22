@@ -1,8 +1,6 @@
-.row
-  .five.centered.columns
-    #slider
-      - Painting.all.each do |painting|
-        = image_tag painting.image
-      / = image_tag 'paintings/painting1.jpg'
-      / = image_tag 'paintings/painting3.jpg'
-      / = image_tag 'paintings/painting4.jpg'
+- cache 'slider' do
+  .row
+    .five.centered.columns
+      #slider
+        - Painting.all.each do |painting|
+          = image_tag painting.image

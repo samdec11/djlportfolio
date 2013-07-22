@@ -5,34 +5,36 @@
     #paint_form
     %br
     %br
-    - @paintings.each do |painting|
-      .row
-        .six.columns
-          = image_tag painting.image, class: 'admin'
-        .six.columns
-          %ul.admin
-            %li= "Title: #{painting.name}"
-            %li= "Description: #{painting.description}"
-            %li
-              = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
-              = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
+    - cache 'admin_paintings' do
+      - @paintings.each do |painting|
+        .row
+          .six.columns
+            = image_tag painting.image, class: 'admin'
+          .six.columns
+            %ul.admin
+              %li= "Title: #{painting.name}"
+              %li= "Description: #{painting.description}"
+              %li
+                = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
+                = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
   .four.columns
     %h3 Works on Paper
     = link_to 'New Work', new_paper_path, class: 'button small success', remote: true
     #paper_form
     %br
     %br
-    - @papers.each do |paper|
-      .row
-        .six.columns
-          = image_tag paper.image, class: 'admin'
-        .six.columns
-          %ul.admin
-            %li= "Title: #{paper.name}"
-            %li= "Description: #{paper.description}"
-            %li
-              = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
-              = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert'
+    - cache 'admin_papers' do
+      - @papers.each do |paper|
+        .row
+          .six.columns
+            = image_tag paper.image, class: 'admin'
+          .six.columns
+            %ul.admin
+              %li= "Title: #{paper.name}"
+              %li= "Description: #{paper.description}"
+              %li
+                = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
+                = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert'
   .four.columns
     %h3 Links
     = link_to 'New Link', new_link_path, class: 'button small success', remote: true
@@ -59,19 +61,21 @@
         = best_in_place @user, :artist_statement, :type => :textarea
     .row
       .six.columns
-        %h4 
-          Bio Image
-          = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
-        #bio_image_form
-        .twelve.columns
-          = image_tag @user.bio_image
+        - cache 'admin_bio_image' do
+          %h4 
+            Bio Image
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+          #bio_image_form
+          .twelve.columns
+            = image_tag @user.bio_image
       .six.columns
-        %h4 
-          Contact Image
-          = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
-        #contact_image_form
-        .twleve.columns
-          = image_tag @user.contact_image
+        - cache 'admin_contact_image' do
+          %h4 
+            Contact Image
+            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+          #contact_image_form
+          .twleve.columns
+            = image_tag @user.contact_image
 .row
   .twelve.columns
     %h3 Bio Info
@@ -81,23 +85,31 @@
         %h5 
           Solo Exhibitions
           = link_to 'New', solo_new_exhibition_path, class: 'button tiny success', remote: true
-        = render :partial => "/shared/table", :locals => {:info => @solos}
+        #solo_form
+        %table#solos
+          = render :partial => "/shared/table", :locals => {:info => @solos}
     .row
       .twelve.columns
         %h5 
           Selected Group Shows
           = link_to 'New', group_new_exhibition_path, class: 'button tiny success', remote: true
-        = render :partial => "/shared/table", :locals => {:info => @groups}
+        #group_form
+        %table#groups
+          = render :partial => "/shared/table", :locals => {:info => @groups}
     .row
       .twelve.columns
         %h4 
           Education
           = link_to 'New', new_school_path, class: 'button small success', remote: true
-        = render :partial => "/shared/table", :locals => {:info => @schools}
+        #school_form
+        %table#schools
+          = render :partial => "/shared/table", :locals => {:info => @schools}
     .row
       .twelve.columns
         %h4 
           Teaching Positions
           = link_to 'New', new_teaching_position_path, class: 'button small success', remote: true
-        = render :partial => "/shared/table", :locals => {:info => @positions}
+        #teaching_form
+        %table#teachings
+          = render :partial => "/shared/table", :locals => {:info => @positions}
         

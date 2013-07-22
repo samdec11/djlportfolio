@@ -5,11 +5,6 @@ class HomeController < ApplicationController
   def about
     @user = User.first
   end
-  def paintings
-    @paintings = Painting.all
-  end
-  def paper
-  end
   def contact
     @user = User.first
   end

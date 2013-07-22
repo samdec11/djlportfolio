@@ -1,12 +1,17 @@
 class ExhibitionsController < ApplicationController
   before_filter :ensure_admin
-  def new
-    @exhibition = Exhibition.new
+  def solo
+    @solo = Exhibition.new
   end
+
+  def group
+    @group = Exhibition.new
+  end
+
   def create
-    Exhibition.create(params[:exhibition])
-    redirect_to(admin_path)
+    Exhibition.create(params[:exhibition], kind: params[:kind])
   end
+  
   def edit
     @exhibition = Exhibition.find(params[:id])
     render :new

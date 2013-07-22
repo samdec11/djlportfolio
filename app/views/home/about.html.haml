@@ -64,4 +64,5 @@
         %td Teaching Artist
         %td= " "
   .five.columns
-    = image_tag @user.bio_image, :class => 'bio'
+    - cache 'bio_image' do
+      = image_tag @user.bio_image, :class => 'bio'

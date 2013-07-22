@@ -1,4 +1,5 @@
-.row
-  .twelve.columns
-    %h2 Paintings
-= render :partial => 'shared/list', :locals => {works: @paintings}
+- cache 'paintings' do
+  .row
+    .twelve.columns
+      %h2 Paintings
+  = render :partial => 'shared/list', :locals => {works: @paintings}

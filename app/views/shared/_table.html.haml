@@ -1,10 +1,9 @@
+%tr
+  %th First Column
+  %th Second Column
+  %th Third Column
 - info.each do |i|
-  %table
-    %tr
-      %th First Column
-      %th Second Column
-      %th Third Column
-    %tr
-      %td= best_in_place i, :first_column
-      %td= best_in_place i, :second_column
-      %td= best_in_place i, :third_column
+  %tr
+    %td= best_in_place i, :first_column
+    %td= best_in_place i, :second_column
+    %td= best_in_place i, :third_column

@@ -1,0 +1,3 @@
+$('#school_form').empty().append('<%=j render partial: '/shared/bio_form', :locals => {:bio => @school} %>');
+var height = $('#school_form').offset().top;
+$('body').scrollTop(height);

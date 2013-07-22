@@ -17,7 +17,7 @@ Prototype1::Application.routes.draw do
   
   resources :schools, :teaching_positions, :except => [:index]
   
-  resources :exhibitions, :except => [:index] do
+  resources :exhibitions, :except => [:index, :new] do
     new do
       get 'solo'
       get 'group'

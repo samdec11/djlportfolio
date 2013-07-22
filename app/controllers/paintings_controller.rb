@@ -1,4 +1,5 @@
 class PaintingsController < ApplicationController
+  cache_sweeper :painting_sweeper
   before_filter :ensure_admin, :except => [:index]
   def index
     @paintings = Painting.order(:created_at)

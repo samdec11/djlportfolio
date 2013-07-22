@@ -1,0 +1,7 @@
+= form_for bio do |f|
+  = hidden_field_tag :kind, params[:action]
+  = f.text_field :first_column, :placeholder => "First Column"
+  = f.text_field :second_column, :placeholder => "Second Column"
+  = f.text_field :third_column, :placeholder => "Third Column"
+  = button_to_function 'Cancel', 'cancel_form()', class: 'button tiny alert'
+  = f.submit nil, class: 'button tiny success'
