@@ -6,31 +6,19 @@
     %h5 Solo Exhibitions
     %table
       - @solos.each do |solo|
-        %tr
-          %td= solo.first_column
-          %td= solo.second_column
-          %td= solo.third_column
+        = render partial: 'table', :locals => {info: solo}
     %h5 Selected Group Shows
     %table
       - @groups.each do |group|
-        %tr
-          %td= group.first_column
-          %td= group.second_column
-          %td= group.third_column
+        = render partial: 'table', :locals => {info: group}
     %h2 Education
     %table
       - @schools.each do |school|
-        %tr
-          %td= school.first_column
-          %td= school.second_column
-          %td= school.third_column
+        = render partial: 'table', :locals => {info: school}
     %h2 Teaching Positions
     %table
       - @teachings.each do |teach|
-        %tr
-          %td= teach.first_column
-          %td= teach.second_column
-          %td= teach.third_column
+        = render partial: 'table', :locals => {info: teach}
   .five.columns
     - cache 'bio_image' do
       = image_tag @user.bio_image, :class => 'bio'

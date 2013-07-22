@@ -20,6 +20,6 @@ class HomeController < ApplicationController
     @solos = Exhibition.solo.order('created_at DESC')
     @groups = Exhibition.group.order('created_at DESC')
     @schools = School.order('created_at DESC')
-    @positions = TeachingPosition.order(:created_at)
+    @positions = TeachingPosition.order('created_at DESC')
   end
 end

@@ -28914,3 +28914,420 @@ Read fragment views/admin_contact_image (0.4ms)
   Rendered shared/_table.html.haml (1.2ms)
   Rendered home/admin.html.haml within layouts/application (29.2ms)
 Completed 200 OK in 61ms (Views: 36.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:25:27 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered home/about.html.haml within layouts/application (164.2ms)
+Completed 500  in 171ms
+
+NoMethodError - undefined method `partial' for #<#<Class:0x007fd412a77fb8>:0x007fd4107f2b50>:
+  app/views/home/about.html.haml:9:in `block in _app_views_home_about_html_haml__259944069086781886_70274393277660'
+  activerecord (3.2.11) lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/home/about.html.haml:8:in `_app_views_home_about_html_haml__259944069086781886_70274393277660'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__223790765325938289__process_action__1797402004988684491__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__351175323514062776__call__1811249196019435725__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70274371806940/variables" for 127.0.0.1 at 2013-07-22 00:25:27 -0400
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:26:08 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (1.5ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.2ms)
+  Rendered home/about.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:39:35 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.2ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.2ms)
+  Rendered home/about.html.haml within layouts/application (29.7ms)
+Completed 200 OK in 83ms (Views: 34.0ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:39:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/slider (0.3ms)
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:39:46 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:39:47 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/paintings (0.3ms)
+  Rendered paintings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-22 00:39:48 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  Rendered shared/_list.html.haml (5.3ms)
+  Rendered papers/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:39:50 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (0.2ms)
+  Rendered home/about.html.haml within layouts/application (60.8ms)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-07-22 00:39:51 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/contact_image (2.6ms)
+  Rendered home/contact.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-22 00:39:52 -0400
+Processing by LinksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "links" [0m
+  Rendered links/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 00:39:54 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.5ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image (0.2ms)
+Read fragment views/admin_contact_image (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.1ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.7ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.5ms)
+  Rendered home/admin.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:40:01 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/slider (0.2ms)
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:40:06 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:40:06 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-22 00:40:08 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  Rendered shared/_list.html.haml (1.4ms)
+  Rendered papers/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:40:11 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (0.2ms)
+  Rendered home/about.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-07-22 00:40:14 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/contact_image (0.2ms)
+  Rendered home/contact.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2013-07-22 00:40:21 -0400
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U5+HgV/8qFFgfgwxqMvrKlwR3r9xvNtrWYfUKoHSAlg="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:40:21 -0400
+Processing by HomeController#index as HTML
+Read fragment views/slider (0.3ms)
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Expire fragment views/bio_image (0.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:41:53 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.2ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (0.1ms)
+Write fragment views/bio_image (2.6ms)
+  Rendered home/about.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:41:57 -0400
+Processing by HomeController#index as HTML
+Read fragment views/slider (0.2ms)
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:41:58 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.3ms)
+  Rendered paintings/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-22 00:41:58 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-22 00:42:00 -0400
+Processing by PapersController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "papers" 
+  Rendered shared/_list.html.haml (1.2ms)
+  Rendered papers/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-22 00:42:02 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (2.5ms)
+  Rendered home/about.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-07-22 00:42:04 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/contact_image (0.2ms)
+  Rendered home/contact.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-22 00:42:07 -0400
+Processing by LinksController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "links" [0m
+  Rendered links/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 00:42:09 -0400
+Processing by HomeController#index as HTML
+Read fragment views/slider (0.2ms)
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
