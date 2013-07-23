@@ -22,4 +22,6 @@ function cancel_form() {
   $('#group_form').empty();
   $('#teaching_form').empty();
   $('#school_form').empty();
+  $('#bio_image_form').empty();
+  $('#contact_image_form').empty();
 }

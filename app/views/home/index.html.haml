@@ -2,5 +2,5 @@
   .row
     .five.centered.columns
       #slider
-        - Painting.all.each do |painting|
+        - @paintings.each do |painting|
           = image_tag painting.image

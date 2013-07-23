@@ -64,7 +64,7 @@
         - cache 'admin_bio_image' do
           %h4 
             Bio Image
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+            = link_to 'Edit', edit_bio_user_path(@user.id), class: 'button tiny', remote: true
           #bio_image_form
           .twelve.columns
             = image_tag @user.bio_image
@@ -72,43 +72,84 @@
         - cache 'admin_contact_image' do
           %h4 
             Contact Image
-            = link_to 'Edit', edit_user_path(@user.id), class: 'button tiny', remote: true
+            = link_to 'Edit', edit_contact_user_path(@user.id), class: 'button tiny', remote: true
           #contact_image_form
           .twleve.columns
             = image_tag @user.contact_image
+.row
+  .twelve.columns
+    %h3 Contact Info
+    .row
+      .twelve.columns
+        %h5 
+          Contact Message:
+          = best_in_place @user, :contact_message, :type => :textarea
+        %h5 
+          Email:
+          = best_in_place @user, :email
+        %h5 
+          Facebook:
+          = best_in_place @user, :facebook
+        %h5 
+          Tumblr:
+          = best_in_place @user, :tumblr
+        %h5 
+          Twitter:
+          = best_in_place @user, :twitter
 .row
   .twelve.columns
     %h3 Bio Info
     .row
       .twelve.columns
         %h4 Exhibition History
-        %h5 
+        %h5#solo_header 
           Solo Exhibitions
           = link_to 'New', solo_new_exhibition_path, class: 'button tiny success', remote: true
-        %table#solos
-          = render :partial => "/shared/table", :locals => {:info => @solos}
-        #solo_form
+        .eleven.centered.columns
+          %table#solos
+            = render :partial => "/shared/table", :locals => {:info => @solos}
+          #solo_form
+        .one.columns
     .row
       .twelve.columns
-        %h5 
+        %h5#group_header 
           Selected Group Shows
           = link_to 'New', group_new_exhibition_path, class: 'button tiny success', remote: true
-        %table#groups
-          = render :partial => "/shared/table", :locals => {:info => @groups}
-        #group_form
+        .eleven.centered.columns
+          %table#groups
+            = render :partial => "/shared/table", :locals => {:info => @groups}
+          #group_form
+        .one.columns
     .row
       .twelve.columns
-        %h4 
+        %h4#school_header 
           Education
           = link_to 'New', new_school_path, class: 'button small success', remote: true
-        %table#schools
-          = render :partial => "/shared/table", :locals => {:info => @schools}
-        #school_form
+        .eleven.centered.columns
+          %table#schools
+            = render :partial => "/shared/table", :locals => {:info => @schools}
+          #school_form
+        .one.columns
     .row
       .twelve.columns
-        %h4 
+        %h4#teaching_header 
           Teaching Positions
           = link_to 'New', new_teaching_position_path, class: 'button small success', remote: true
-        %table#teachings
-          = render :partial => "/shared/table", :locals => {:info => @positions}
-        #teaching_form
+        .eleven.centered.columns
+          %table#teachings
+            = render :partial => "/shared/table", :locals => {:info => @positions}
+          #teaching_form
+        .one.columns
+.row
+  .twelve.columns
+    %h3 Password Change
+    .row
+      .six.columns
+        = form_tag change_password_user_path(@user), :method => :put do
+          = label_tag :old_password
+          = password_field_tag :old_password
+          = label_tag :password, "New password"
+          = password_field_tag :password
+          = label_tag :password_confirmation, "New password confirmation"
+          = password_field_tag :password_confirmation
+          = submit_tag "Change Password", :class => "button small alert"

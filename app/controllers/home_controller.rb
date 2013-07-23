@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   before_filter :ensure_admin, :only => [:admin]
   def index
+    @paintings = Painting.order(:created_at)
   end
   def about
     @user = User.first

@@ -4,10 +4,32 @@
     %br
     %h4 David J. Loncle
     %br
+    - if @user.contact_message.present?
+      %p.bio= @user.contact_message
     %h4
+      =image_tag "email.png"
       Email:
-      %span#email
-        = link_to 'david.loncle@gmail.com', 'MAILTO:%20david.loncle@gmail.com'
+      %span.contact_text
+        = link_to @user.email, "MAILTO:%20#{@user.email}"
+    - if @user.facebook.present?  
+      %h4
+        =image_tag "facebook.png"
+        Facebook:
+        %span.contact_text
+          = link_to @user.facebook, @user.facebook, :target => "_blank"
+
+    - if @user.tumblr.present?
+      %h4
+        =image_tag "tumblr.png"
+        Tumblr:
+        %span.contact_text
+          = link_to @user.tumblr, @user.tumblr, :target => "_blank"
+    - if @user.twitter.present?
+      %h4
+        =image_tag "twitter.png"
+        Twitter:
+        %span.contact_text
+          = link_to @user.twitter, @user.twitter, :target => "_blank"
   .five.columns
     - cache 'contact_image' do
       = image_tag @user.contact_image, :id=>'contact'

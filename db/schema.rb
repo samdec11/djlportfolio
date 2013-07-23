@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130721210124) do
+ActiveRecord::Schema.define(:version => 20130723013553) do
 
   create_table "exhibitions", :force => true do |t|
     t.string   "kind"
@@ -69,6 +69,10 @@ ActiveRecord::Schema.define(:version => 20130721210124) do
     t.text     "artist_statement"
     t.text     "bio_image"
     t.text     "contact_image"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "tumblr"
+    t.text     "contact_message"
   end
 
 end

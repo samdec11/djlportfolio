@@ -1,0 +1,6 @@
+= form_for @user do |f|
+  = f.label :bio_image
+  = f.file_field :bio_image
+  = f.text_field :remote_bio_image_url
+  = button_to_function 'Cancel', 'cancel_form()', class: 'button tiny alert'
+  = f.submit nil, class: 'button tiny success'
