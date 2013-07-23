@@ -31939,3 +31939,112 @@ Processing by HomeController#admin as HTML
   Rendered shared/_table.html.haml (1.5ms)
   Rendered home/admin.html.haml within layouts/application (34.7ms)
 Completed 200 OK in 48ms (Views: 42.6ms | ActiveRecord: 3.1ms)
+
+
+Started PUT "/users/3/change_password" for 127.0.0.1 at 2013-07-22 23:03:25 -0400
+Connecting to database specified by database.yml
+Processing by UsersController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+eTF2JuUTMt94AuVbO0jhYkzPQ/+Xw9U2mPJ80g80Y=", "old_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Change Password", "id"=>"3"}
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 170ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 23:03:26 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.9ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.9ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (1.0ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (15.6ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (11.1ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (4.7ms)
+  Rendered home/admin.html.haml within layouts/application (370.3ms)
+Completed 200 OK in 539ms (Views: 437.3ms | ActiveRecord: 19.9ms)
+
+
+Started PUT "/users/3/change_password" for 127.0.0.1 at 2013-07-22 23:04:01 -0400
+Processing by UsersController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+eTF2JuUTMt94AuVbO0jhYkzPQ/+Xw9U2mPJ80g80Y=", "old_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Change Password", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 98ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 23:04:01 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (4.0ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.9ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.2ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.6ms)
+  Rendered home/admin.html.haml within layouts/application (50.5ms)
+Completed 200 OK in 68ms (Views: 61.9ms | ActiveRecord: 3.6ms)
+
+
+Started PUT "/users/3/change_password" for 127.0.0.1 at 2013-07-22 23:04:15 -0400
+Processing by UsersController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+eTF2JuUTMt94AuVbO0jhYkzPQ/+Xw9U2mPJ80g80Y=", "old_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Change Password", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 90ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 23:04:15 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.3ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.6ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  Rendered home/admin.html.haml within layouts/application (46.3ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 3.5ms)
+
+
+Started PUT "/users/3/change_password" for 127.0.0.1 at 2013-07-22 23:04:22 -0400
+Processing by UsersController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+eTF2JuUTMt94AuVbO0jhYkzPQ/+Xw9U2mPJ80g80Y=", "old_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Change Password", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 92ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-22 23:04:22 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.9ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.6ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.0ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  Rendered home/admin.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 3.2ms)

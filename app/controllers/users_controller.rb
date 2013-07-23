@@ -28,10 +28,8 @@ class UsersController < ApplicationController
           @auth.password_confirmation = params[:password_confirmation]
           if @auth.save
             flash[:notice] = "Password successfully updated"
-            redirect_to(admin_path)
           else
             flash[:alert] = "Password not changed"
-            redirect_to(admin_path)
           end
         else
           flash[:alert] = "New password does not match confirmation"
@@ -41,7 +39,7 @@ class UsersController < ApplicationController
       end
     else
       flash[:alert] = "Old password incorrect"
-      redirect_to(admin_path)
     end
+    redirect_to(admin_path)
   end
 end
