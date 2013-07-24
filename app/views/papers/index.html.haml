@@ -1,4 +1,5 @@
-.row
-  .twelve.columns
-    %h2 Works on Paper
-= render :partial => 'shared/list', :locals => {works: @papers}
+- cache 'papers' do
+  .row
+    .twelve.columns
+      %h2 Works on Paper
+  = render :partial => 'shared/list', :locals => {works: @papers}

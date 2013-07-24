@@ -1,4 +1,5 @@
 class PapersController < ApplicationController
+  cache_sweeper :paper_sweeper
   before_filter :ensure_admin, :except => [:index]
   def index
     @papers = Paper.order(:created_at)

@@ -32048,3 +32048,381 @@ Processing by HomeController#admin as HTML
   Rendered shared/_table.html.haml (1.4ms)
   Rendered home/admin.html.haml within layouts/application (40.3ms)
 Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-23 22:03:51 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  [1m[36mPainting Load (2.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  Rendered home/index.html.haml within layouts/application (366.4ms)
+Completed 200 OK in 516ms (Views: 436.8ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-23 22:04:17 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "paintings" 
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  Rendered shared/_list.html.haml (27.2ms)
+  Rendered paintings/index.html.haml within layouts/application (38.0ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-07-23 22:04:17 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "paintings" 
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  Rendered shared/_list.html.haml (27.9ms)
+  Rendered paintings/index.html.haml within layouts/application (29.7ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-23 22:04:25 -0400
+Processing by PapersController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "papers" 
+  Rendered shared/_list.html.haml (7.9ms)
+  Rendered papers/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 21ms (Views: 14.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-07-23 22:04:27 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (2.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (1.3ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.7ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.5ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered home/about.html.haml within layouts/application (40.0ms)
+Completed 200 OK in 105ms (Views: 37.8ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-07-23 22:04:34 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  Rendered home/contact.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-23 22:04:51 -0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "email"=>"david.loncle@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'david.loncle@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 90ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:04:51 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (6.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.7ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (5.2ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.8ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  Rendered home/admin.html.haml within layouts/application (105.3ms)
+Completed 200 OK in 128ms (Views: 109.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-07-23 22:05:09 -0400
+Processing by PapersController#new as JS
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_work_form.html.haml (113.4ms)
+  Rendered papers/new.js.erb (115.6ms)
+Completed 200 OK in 129ms (Views: 121.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-07-23 22:05:17 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd44ee62330 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130723-599-wg75vq>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 24 Jul 2013 02:05:17 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Wed, 24 Jul 2013 02:05:17 UTC +00:00]]
+  [1m[36m (98.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 12496ms (ActiveRecord: 104.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:05:34 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.7ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.6ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.1ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (106.5ms)
+Completed 200 OK in 119ms (Views: 112.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-23 22:05:49 -0400
+Processing by PapersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "papers" 
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  Rendered shared/_list.html.haml (5.0ms)
+  Rendered papers/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-07-23 22:05:49 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+  Rendered shared/_list.html.haml (6.2ms)
+  Rendered papers/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:06:06 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.0ms)
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.8ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (0.9ms)
+  Rendered home/admin.html.haml within layouts/application (31.8ms)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/papers/3" for 127.0.0.1 at 2013-07-23 22:06:14 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPaper Load (0.6ms)[0m  [1mSELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "papers" WHERE "papers"."id" = 3
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 63ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:06:14 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.6ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.4ms)
+  Rendered home/admin.html.haml within layouts/application (33.4ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:07:53 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.2ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.9ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (48.9ms)
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-07-23 22:08:00 -0400
+Processing by PapersController#new as JS
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_work_form.html.haml (46.4ms)
+  Rendered papers/new.js.erb (47.5ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-07-23 22:08:05 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd44910ec10 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130723-599-y887ln>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 24 Jul 2013 02:08:06 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Wed, 24 Jul 2013 02:08:06 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 12375ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:08:22 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.7ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.7ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.9ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (75.0ms)
+Completed 200 OK in 87ms (Views: 80.9ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/papers/4" for 127.0.0.1 at 2013-07-23 22:08:30 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "papers" WHERE "papers"."id" = 4[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:08:30 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.7ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.5ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  Rendered home/admin.html.haml within layouts/application (31.6ms)
+Completed 200 OK in 44ms (Views: 37.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-07-23 22:08:44 -0400
+Processing by PapersController#new as JS
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_work_form.html.haml (2.8ms)
+  Rendered papers/new.js.erb (3.9ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-07-23 22:08:51 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd44a927658 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130723-599-1b1fn7j>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 24 Jul 2013 02:08:51 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Wed, 24 Jul 2013 02:08:51 UTC +00:00]]
+  [1m[36m (98.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 15755ms (ActiveRecord: 100.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:09:11 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.7ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.2ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.9ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (0.9ms)
+  Rendered home/admin.html.haml within layouts/application (124.7ms)
+Completed 200 OK in 137ms (Views: 130.6ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/papers/5" for 127.0.0.1 at 2013-07-23 22:09:26 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mQw8IaJ7SLhFrjAJPHK7Lq3hlMwhvu8KV3u1ia9l8Gg=", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPaper Load (0.3ms)[0m  SELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mSQL (97.8ms)[0m  [1mDELETE FROM "papers" WHERE "papers"."id" = 5[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 103ms (ActiveRecord: 98.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:09:26 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.0ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.0ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (0.9ms)
+  Rendered home/admin.html.haml within layouts/application (36.9ms)
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:10:36 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.5ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.2ms)
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (101.0ms)
+Completed 200 OK in 113ms (Views: 106.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-07-23 22:11:41 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  [1m[36mPaper Load (0.6ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.1ms)
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.9ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (0.9ms)
+  Rendered home/admin.html.haml within layouts/application (48.0ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 3.5ms)

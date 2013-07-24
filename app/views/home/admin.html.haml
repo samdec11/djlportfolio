@@ -16,7 +16,7 @@
               %li= "Description: #{painting.description}"
               %li
                 = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
-                = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert'
+                = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
   .four.columns
     %h3 Works on Paper
     = link_to 'New Work', new_paper_path, class: 'button small success', remote: true
@@ -34,7 +34,7 @@
               %li= "Description: #{paper.description}"
               %li
                 = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
-                = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert'
+                = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
   .four.columns
     %h3 Links
     = link_to 'New Link', new_link_path, class: 'button small success', remote: true
@@ -51,7 +51,7 @@
             %li= "Web Address: #{link.address}"
             %li
               = link_to 'Edit', edit_link_path(link.id), class: 'button tiny', remote: true
-              = link_to 'Delete', link, :method => :delete, class: 'button tiny alert'
+              = link_to 'Delete', link, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
 .row
   .twelve.columns
     %h3 General
@@ -152,4 +152,4 @@
           = password_field_tag :password
           = label_tag :password_confirmation, "New password confirmation"
           = password_field_tag :password_confirmation
-          = submit_tag "Change Password", :class => "button small alert"
+          = submit_tag "Change Password", :class => "button small alert", :confirm => "Are you sure you want to change your password?"
