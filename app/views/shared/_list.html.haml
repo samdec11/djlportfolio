@@ -7,7 +7,8 @@
     .ten.centered.columns
       %ul{:'data-clearing'=>true}
         - works.each do |work|
-          %li.works
-            %a{:href=> work.image}
-              = image_tag work.image, :class => 'works'
+          - cache work do
+            %li.works
+              %a{:href=> work.image}
+                = image_tag work.image, :class => 'works'
     .two.columns

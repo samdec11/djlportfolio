@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  cache_sweeper :user_sweeper
   respond_to :html, :json
 
   before_filter :ensure_admin

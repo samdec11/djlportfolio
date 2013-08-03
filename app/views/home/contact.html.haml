@@ -31,5 +31,5 @@
         %span.contact_text
           = link_to @user.twitter, @user.twitter, :target => "_blank"
   .five.columns
-    - cache 'contact_image' do
+    - cache [@user, 'contact_image'] do
       = image_tag @user.contact_image, :id=>'contact'

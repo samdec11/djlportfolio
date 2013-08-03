@@ -20,5 +20,5 @@
       - @teachings.each do |teach|
         = render partial: 'table', :locals => {info: teach}
   .five.columns
-    - cache 'bio_image' do
+    - cache [@user, 'bio_image'] do
       = image_tag @user.bio_image, :class => 'bio'

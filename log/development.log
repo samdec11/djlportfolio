@@ -32974,3 +32974,2383 @@ Processing by HomeController#index as HTML
   [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
   Rendered home/index.html.haml within layouts/application (4.2ms)
 Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-03 14:21:07 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+Read fragment views/slider (0.1ms)
+  [1m[36mPainting Load (3.1ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Write fragment views/slider (2.5ms)
+  Rendered home/index.html.haml within layouts/application (61.3ms)
+Completed 200 OK in 242ms (Views: 133.4ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:21:23 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "paintings" 
+  [1m[36mPainting Load (0.3ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  Rendered shared/_list.html.haml (9.4ms)
+Write fragment views/paintings (2.2ms)
+  Rendered paintings/index.html.haml within layouts/application (22.4ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:21:24 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:22:13 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:22:13 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:23:12 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "paintings" 
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+  Rendered shared/_list.html.haml (8.9ms)
+Write fragment views/paintings (9.6ms)
+  Rendered paintings/index.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:23:12 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.3ms)
+  Rendered paintings/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-03 14:31:53 -0400
+Processing by HomeController#index as HTML
+Read fragment views/slider (0.2ms)
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Write fragment views/slider (11.1ms)
+  Rendered home/index.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:31:57 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "paintings" [0m
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+  Rendered shared/_list.html.haml (14.6ms)
+  Rendered paintings/index.html.haml within layouts/application (16.1ms)
+Completed 500  in 19ms
+
+NoMethodError - undefined method `downcase' for #<Class:0x007f94d7e59610>:
+  activerecord (3.2.11) lib/active_record/dynamic_matchers.rb:55:in `method_missing'
+  app/views/shared/_list.html.haml:10:in `block in _app_views_shared__list_html_haml___774431574283066296_70138627253980'
+  activerecord (3.2.11) lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/shared/_list.html.haml:9:in `_app_views_shared__list_html_haml___774431574283066296_70138627253980'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.11) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  haml (4.0.3) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.3) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.3) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/paintings/index.html.haml:5:in `block in _app_views_paintings_index_html_haml___1269971738917112224_70138579808240'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:53:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/paintings/index.html.haml:1:in `_app_views_paintings_index_html_haml___1269971738917112224_70138579808240'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__2974250858852983088__process_action__2399801991358555178__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138627118260/variables" for 127.0.0.1 at 2013-08-03 14:31:57 -0400
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:32:27 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "paintings" [0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/Painting-25 (1.0ms)
+  Rendered shared/_list.html.haml (7.5ms)
+  Rendered paintings/index.html.haml within layouts/application (8.8ms)
+Completed 500  in 11ms
+
+TypeError - can't convert Fixnum into Hash:
+  activesupport (3.2.11) lib/active_support/cache.rb:477:in `merged_options'
+  activesupport (3.2.11) lib/active_support/cache.rb:313:in `read'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:75:in `block in read_fragment'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `block in instrument_fragment_cache'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `instrument_fragment_cache'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:74:in `read_fragment'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:47:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/shared/_list.html.haml:10:in `block in _app_views_shared__list_html_haml___774431574283066296_70138627284720'
+  activerecord (3.2.11) lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/shared/_list.html.haml:9:in `_app_views_shared__list_html_haml___774431574283066296_70138627284720'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.11) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  haml (4.0.3) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.3) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.3) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/paintings/index.html.haml:5:in `block in _app_views_paintings_index_html_haml___1269971738917112224_70138579808240'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:53:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/paintings/index.html.haml:1:in `_app_views_paintings_index_html_haml___1269971738917112224_70138579808240'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__2974250858852983088__process_action__2399801991358555178__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138590651060/variables" for 127.0.0.1 at 2013-08-03 14:32:27 -0400
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:33:27 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "paintings" [0m
+  [1m[35mPainting Load (0.3ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734 (0.1ms)
+Write fragment views/paintings/25-20130624152734 (11.2ms)
+Read fragment views/paintings/26-20130624152753 (0.1ms)
+Write fragment views/paintings/26-20130624152753 (12.4ms)
+Read fragment views/paintings/27-20130624152809 (0.1ms)
+Write fragment views/paintings/27-20130624152809 (48.6ms)
+Read fragment views/paintings/28-20130624152835 (0.1ms)
+Write fragment views/paintings/28-20130624152835 (3.5ms)
+Read fragment views/paintings/29-20130624152850 (0.1ms)
+Write fragment views/paintings/29-20130624152850 (14.0ms)
+Read fragment views/paintings/30-20130624152907 (0.1ms)
+Write fragment views/paintings/30-20130624152907 (14.2ms)
+Read fragment views/paintings/31-20130624152921 (0.1ms)
+Write fragment views/paintings/31-20130624152921 (13.7ms)
+Read fragment views/paintings/32-20130624152935 (0.1ms)
+Write fragment views/paintings/32-20130624152935 (17.2ms)
+  Rendered shared/_list.html.haml (154.0ms)
+Write fragment views/paintings (60.4ms)
+  Rendered paintings/index.html.haml within layouts/application (216.0ms)
+Completed 200 OK in 227ms (Views: 225.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:33:28 -0400
+Processing by PaintingsController#index as HTML
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-03 14:36:04 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (2.2ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (2.2ms)
+  [1m[36mExhibition Load (0.6ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.9ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.6ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image (1.0ms)
+  Rendered home/about.html.haml within layouts/application (108.2ms)
+Completed 500  in 286ms
+
+TypeError - can't convert Fixnum into Hash:
+  activesupport (3.2.11) lib/active_support/cache.rb:477:in `merged_options'
+  activesupport (3.2.11) lib/active_support/cache.rb:313:in `read'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:75:in `block in read_fragment'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `block in instrument_fragment_cache'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `instrument_fragment_cache'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:74:in `read_fragment'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:47:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/about.html.haml:23:in `_app_views_home_about_html_haml__3592088365882986713_70138596771100'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__2413308056485486871__process_action__3555009750692879162__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138614813640/variables" for 127.0.0.1 at 2013-08-03 14:36:04 -0400
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-03 14:36:19 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/bio_image (0.7ms)
+  Rendered home/about.html.haml within layouts/application (46.6ms)
+Completed 500  in 51ms
+
+TypeError - can't convert User into Hash:
+  activesupport (3.2.11) lib/active_support/cache.rb:477:in `merged_options'
+  activesupport (3.2.11) lib/active_support/cache.rb:313:in `read'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:75:in `block in read_fragment'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `block in instrument_fragment_cache'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `instrument_fragment_cache'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:74:in `read_fragment'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:47:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/about.html.haml:23:in `_app_views_home_about_html_haml__3592088365882986713_70138627765400'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:425:in `_run__2413308056485486871__process_action__3555009750692879162__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138613318100/variables" for 127.0.0.1 at 2013-08-03 14:36:19 -0400
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-03 14:42:50 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image/1374547677 (0.1ms)
+Write fragment views/bio_image/1374547677 (43.4ms)
+  Rendered home/about.html.haml within layouts/application (55.9ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-08-03 14:43:47 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/contact_image1374547677 (0.1ms)
+Write fragment views/contact_image1374547677 (10.3ms)
+  Rendered home/contact.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-08-03 14:44:01 -0400
+Processing by HomeController#contact as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/contact_image/1374547677 (0.1ms)
+Write fragment views/contact_image/1374547677 (9.3ms)
+  Rendered home/contact.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-03 14:45:45 -0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "email"=>"david.loncle@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'david.loncle@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 90ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:45:46 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.7ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/admin_painting-25 (0.8ms)
+  Rendered home/admin.html.haml within layouts/application (23.4ms)
+Completed 500  in 49ms
+
+TypeError - can't convert Fixnum into Hash:
+  activesupport (3.2.11) lib/active_support/cache.rb:477:in `merged_options'
+  activesupport (3.2.11) lib/active_support/cache.rb:313:in `read'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:75:in `block in read_fragment'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `block in instrument_fragment_cache'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `instrument_fragment_cache'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:74:in `read_fragment'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:47:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/admin.html.haml:10:in `block (2 levels) in _app_views_home_admin_html_haml__1015469191217515092_70138594457380'
+  activerecord (3.2.11) lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/home/admin.html.haml:9:in `block in _app_views_home_admin_html_haml__1015469191217515092_70138594457380'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:53:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/admin.html.haml:8:in `_app_views_home_admin_html_haml__1015469191217515092_70138594457380'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:436:in `_run__2413308056485486871__process_action__2527213336448848717__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138591276260/variables" for 127.0.0.1 at 2013-08-03 14:45:46 -0400
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  [1m[36mPaper Load (1.0ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+  [1m[35mLink Load (1.0ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:46:50 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.1ms)
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/admin_#<Painting:0x007f94d44432c8> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d44432c8> (9.4ms)
+Read fragment views/admin_#<Painting:0x007f94d4442cb0> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4442cb0> (11.2ms)
+Read fragment views/admin_#<Painting:0x007f94d4442698> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4442698> (9.7ms)
+Read fragment views/admin_#<Painting:0x007f94d4442008> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4442008> (50.1ms)
+Read fragment views/admin_#<Painting:0x007f94d44419f0> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d44419f0> (3.3ms)
+Read fragment views/admin_#<Painting:0x007f94d4441360> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4441360> (3.3ms)
+Read fragment views/admin_#<Painting:0x007f94d4440c30> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4440c30> (11.6ms)
+Read fragment views/admin_#<Painting:0x007f94d4440550> (0.1ms)
+Write fragment views/admin_#<Painting:0x007f94d4440550> (2.9ms)
+Write fragment views/admin_paintings (13.5ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[36mPaper Load (0.5ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Write fragment views/admin_papers (10.4ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Write fragment views/admin_bio_image/1374547677 (12.0ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+Write fragment views/admin_contact_image/1374547677 (59.0ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (7.3ms)
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.8ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.8ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (265.6ms)
+Completed 200 OK in 280ms (Views: 272.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:48:38 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+ERROR: compiling _app_views_home_admin_html_haml__1015469191217515092_70138627195880 RAISED /Users/Sean/Documents/projects/david_loncle/port/app/views/home/admin.html.haml:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+ cache "admin/"painting do
+                       ^
+Function body:           def _app_views_home_admin_html_haml__1015469191217515092_70138627195880(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "home/admin";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<div class='row'>\n  <div class='four columns'>\n    <h3>Paintings</h3>\n    #{_hamlout.adjust_tabs(2); 
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New Painting', new_painting_path, class: 'button small success', remote: true
+));}\n    <div id='paint_form'></div>\n    <br>\n    <br>\n", 0, false);
+
+
+ cache 'admin_paintings' do
+ @paintings.each do |painting|
+ cache "admin/"painting do
+_hamlout.push_text("    <div class='row'>\n      <div class='six columns'>\n        #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( image_tag painting.image, class: 'admin'
+));}\n      </div>\n      <div class='six columns'>\n        <ul class='admin'>\n          <li>#{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_true_false_true_false_true_false(("Title: #{painting.name}"
+));}</li>\n          <li>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false(("Description: #{painting.description}"
+));}</li>\n          <li>\n            #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
+));}\n            #{_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Delete', painting, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
+));}\n          </li>\n        </ul>\n      </div>\n    </div>\n", -4, false);end;end;end;_hamlout.push_text("  </div>\n  <div class='four columns'>\n    <h3>Works on Paper</h3>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New Work', new_paper_path, class: 'button small success', remote: true
+));}\n    <div id='paper_form'></div>\n    <br>\n    <br>\n", 0, false);
+
+
+ cache 'admin_papers' do
+ @papers.each do |paper|
+ cache "admin_#{paper}" do
+_hamlout.push_text("    <div class='row'>\n      <div class='six columns'>\n        #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( image_tag paper.image, class: 'admin'
+));}\n      </div>\n      <div class='six columns'>\n        <ul class='admin'>\n          <li>#{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_true_false_true_false_true_false(("Title: #{paper.name}"
+));}</li>\n          <li>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false(("Description: #{paper.description}"
+));}</li>\n          <li>\n            #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
+));}\n            #{_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Delete', paper, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
+));}\n          </li>\n        </ul>\n      </div>\n    </div>\n", -4, false);end;end;end;_hamlout.push_text("  </div>\n  <div class='four columns'>\n    <h3>Links</h3>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New Link', new_link_path, class: 'button small success', remote: true
+));}\n    <div id='link_form'></div>\n    <br>\n    <br>\n", 0, false);
+
+
+ @links.each do |link|
+_hamlout.push_text("    <div class='row'>\n      <div class='six columns'>\n        #{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to link.display, link.address, target: 'blank'
+));}\n      </div>\n      <div class='six columns'>\n        <ul class='admin'>\n          <li>#{_hamlout.adjust_tabs(2); 
+
+_hamlout.format_script_false_true_false_true_false_true_false(("Display Text: #{link.display}"
+));}</li>\n          <li>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false(("Web Address: #{link.address}"
+));}</li>\n          <li>\n            #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Edit', edit_link_path(link.id), class: 'button tiny', remote: true
+));}\n            #{_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Delete', link, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
+));}\n          </li>\n        </ul>\n      </div>\n    </div>\n", -4, false);end;_hamlout.push_text("  </div>\n</div>\n<div class='row'>\n  <div class='twelve columns'>\n    <h3>General</h3>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h4>Artist Statement</h4>\n        #{_hamlout.adjust_tabs(2); 
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :artist_statement, :type => :textarea
+));}\n      </div>\n    </div>\n    <div class='row'>\n      <div class='six columns'>\n", 0, false);
+
+ cache "admin_bio_image/#{@user.updated_at.to_i}" do
+_hamlout.push_text("        <h4>\n          Bio Image\n          #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Edit', edit_bio_user_path(@user.id), class: 'button tiny', remote: true
+));}\n        </h4>\n        <div id='bio_image_form'></div>\n        <div class='twelve columns'>\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( image_tag @user.bio_image
+));}\n        </div>\n", -1, false);end;_hamlout.push_text("      </div>\n      <div class='six columns'>\n", 0, false);
+ cache "admin_contact_image/#{@user.updated_at.to_i}" do
+_hamlout.push_text("        <h4>\n          Contact Image\n          #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Edit', edit_contact_user_path(@user.id), class: 'button tiny', remote: true
+));}\n        </h4>\n        <div id='contact_image_form'></div>\n        <div class='twleve columns'>\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( image_tag @user.contact_image
+));}\n        </div>\n", -1, false);end;_hamlout.push_text("      </div>\n    </div>\n  </div>\n</div>\n<div class='row'>\n  <div class='twelve columns'>\n    <h3>Contact Info</h3>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h5>\n          Contact Message:\n          #{_hamlout.adjust_tabs(1); 
+
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :contact_message, :type => :textarea
+));}\n        </h5>\n        <h5>\n          Email:\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :email
+));}\n        </h5>\n        <h5>\n          Facebook:\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :facebook
+));}\n        </h5>\n        <h5>\n          Tumblr:\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :tumblr
+));}\n        </h5>\n        <h5>\n          Twitter:\n          #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( best_in_place @user, :twitter
+));}\n        </h5>\n      </div>\n    </div>\n  </div>\n</div>\n<div class='row'>\n  <div class='twelve columns'>\n    <h3>Bio Info</h3>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h4>Exhibition History</h4>\n        <h5 id='solo_header'>\n          Solo Exhibitions\n          #{
+
+
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New', solo_new_exhibition_path, class: 'button tiny success', remote: true
+));}\n        </h5>\n        <div class='eleven centered columns'>\n          <table id='solos'>\n            #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( render :partial => "/shared/table", :locals => {:info => @solos}
+));}\n          </table>\n          <div id='solo_form'></div>\n        </div>\n        <div class='one columns'></div>\n      </div>\n    </div>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h5 id='group_header'>\n          Selected Group Shows\n          #{_hamlout.adjust_tabs(-1); 
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New', group_new_exhibition_path, class: 'button tiny success', remote: true
+));}\n        </h5>\n        <div class='eleven centered columns'>\n          <table id='groups'>\n            #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( render :partial => "/shared/table", :locals => {:info => @groups}
+));}\n          </table>\n          <div id='group_form'></div>\n        </div>\n        <div class='one columns'></div>\n      </div>\n    </div>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h4 id='school_header'>\n          Education\n          #{_hamlout.adjust_tabs(-1); 
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New', new_school_path, class: 'button small success', remote: true
+));}\n        </h4>\n        <div class='eleven centered columns'>\n          <table id='schools'>\n            #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( render :partial => "/shared/table", :locals => {:info => @schools}
+));}\n          </table>\n          <div id='school_form'></div>\n        </div>\n        <div class='one columns'></div>\n      </div>\n    </div>\n    <div class='row'>\n      <div class='twelve columns'>\n        <h4 id='teaching_header'>\n          Teaching Positions\n          #{_hamlout.adjust_tabs(-1); 
+
+
+
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New', new_teaching_position_path, class: 'button small success', remote: true
+));}\n        </h4>\n        <div class='eleven centered columns'>\n          <table id='teachings'>\n            #{_hamlout.adjust_tabs(1); 
+
+_hamlout.format_script_false_false_false_true_false_true_false(( render :partial => "/shared/table", :locals => {:info => @positions}
+));}\n          </table>\n          <div id='teaching_form'></div>\n        </div>\n        <div class='one columns'></div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class='row'>\n  <div class='twelve columns'>\n    <h3>Password Change</h3>\n    <div class='row'>\n      <div class='six columns'>\n        ", -2, false);
+
+
+
+
+
+
+haml_temp =  form_tag change_password_user_path(@user), :method => :put do
+_hamlout.push_text("        #{_hamlout.format_script_false_false_false_true_false_true_false(( label_tag :old_password
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( password_field_tag :old_password
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( label_tag :password, "New password"
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( password_field_tag :password
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( label_tag :password_confirmation, "New password confirmation"
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( password_field_tag :password_confirmation
+));}\n        #{_hamlout.format_script_false_false_false_true_false_true_false(( submit_tag "Change Password", :class => "button small alert", :confirm => "Are you sure you want to change your password?"
+));}\n", 0, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n      </div>\n    </div>\n  </div>\n</div>\n", -4, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/remotipart-1.2.1/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:436:in `_run__2413308056485486871__process_action__2527213336448848717__callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-contrib-1.1.0/lib/rack/contrib/response_headers.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/headers.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/meta_request-0.2.7/lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:84:in `protected_app_call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:79:in `better_errors_call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/better_errors-0.9.0/lib/better_errors/middleware.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:54:in `process'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:50:in `tap'
+/Users/Sean/.rvm/gems/ruby-1.9.3-p194-falcon/gems/railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+  Rendered home/admin.html.haml within layouts/application (19.1ms)
+Completed 500  in 25ms
+
+SyntaxError - /Users/Sean/Documents/projects/david_loncle/port/app/views/home/admin.html.haml:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+ cache "admin/"painting do
+                       ^:
+  app/views/home/admin.html.haml:10:in `'
+  actionpack (3.2.11) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.11) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.11) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.11) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:436:in `_run__2413308056485486871__process_action__2527213336448848717__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138590996580/variables" for 127.0.0.1 at 2013-08-03 14:48:38 -0400
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:49:34 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/admin_paintings (0.2ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[36mLink Load (0.7ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.6ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.1ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (81.1ms)
+Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:50:32 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.1ms)
+  [1m[35mPainting Load (0.5ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734 (0.7ms)
+  Rendered home/admin.html.haml within layouts/application (4.7ms)
+Completed 500  in 11ms
+
+TypeError - can't convert String into Hash:
+  activesupport (3.2.11) lib/active_support/cache.rb:477:in `merged_options'
+  activesupport (3.2.11) lib/active_support/cache.rb:313:in `read'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:75:in `block in read_fragment'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `block in instrument_fragment_cache'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:123:in `instrument_fragment_cache'
+  actionpack (3.2.11) lib/action_controller/caching/fragments.rb:74:in `read_fragment'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:47:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/admin.html.haml:10:in `block (2 levels) in _app_views_home_admin_html_haml__1015469191217515092_70138591690240'
+  activerecord (3.2.11) lib/active_record/relation/delegation.rb:6:in `each'
+  app/views/home/admin.html.haml:9:in `block in _app_views_home_admin_html_haml__1015469191217515092_70138591690240'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:53:in `fragment_for'
+  actionpack (3.2.11) lib/action_view/helpers/cache_helper.rb:36:in `cache'
+  app/views/home/admin.html.haml:8:in `_app_views_home_admin_html_haml__1015469191217515092_70138591690240'
+  actionpack (3.2.11) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.11) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.11) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Sean/.rvm/rubies/ruby-1.9.3-p194-falcon/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:436:in `_run__2413308056485486871__process_action__2527213336448848717__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/headers.rb:16:in `call'
+  meta_request (0.2.7) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__4302411921847870095__call__4449404959232645614__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70138596737840/variables" for 127.0.0.1 at 2013-08-03 14:50:32 -0400
+  [1m[36mExhibition Load (0.3ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  [1m[35mExhibition Load (0.3ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.3ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  [1m[35mPaper Load (0.2ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+  [1m[35mTeachingPosition Load (0.2ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:51:37 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.6ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.1ms)
+Write fragment views/paintings/25-20130624152734/admin (9.6ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Write fragment views/paintings/26-20130624152753/admin (12.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Write fragment views/paintings/27-20130624152809/admin (10.3ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Write fragment views/paintings/28-20130624152835/admin (2.8ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Write fragment views/paintings/29-20130624152850/admin (11.0ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Write fragment views/paintings/30-20130624152907/admin (12.7ms)
+Read fragment views/paintings/31-20130624152921/admin (0.3ms)
+Write fragment views/paintings/31-20130624152921/admin (59.5ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/paintings/32-20130624152935/admin (11.0ms)
+Write fragment views/admin_paintings (13.8ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Write fragment views/admin_papers (12.6ms)
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Write fragment views/admin_bio_image/1374547677 (12.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+Write fragment views/admin_contact_image/1374547677 (11.5ms)
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.6ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[35mSchool Load (0.5ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (3.6ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.3ms)
+  Rendered home/admin.html.haml within layouts/application (289.7ms)
+Completed 200 OK in 303ms (Views: 295.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-03 14:52:20 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/slider (0.2ms)
+  [1m[36mPainting Load (0.5ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Write fragment views/slider (12.9ms)
+  Rendered home/index.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:52:26 -0400
+Processing by PaintingsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/paintings (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "paintings" [0m
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734 (0.1ms)
+Write fragment views/paintings/25-20130624152734 (11.2ms)
+Read fragment views/paintings/26-20130624152753 (0.1ms)
+Write fragment views/paintings/26-20130624152753 (11.3ms)
+Read fragment views/paintings/27-20130624152809 (0.1ms)
+Write fragment views/paintings/27-20130624152809 (56.4ms)
+Read fragment views/paintings/28-20130624152835 (0.1ms)
+Write fragment views/paintings/28-20130624152835 (3.2ms)
+Read fragment views/paintings/29-20130624152850 (0.1ms)
+Write fragment views/paintings/29-20130624152850 (12.7ms)
+Read fragment views/paintings/30-20130624152907 (0.1ms)
+Write fragment views/paintings/30-20130624152907 (14.0ms)
+Read fragment views/paintings/31-20130624152921 (0.1ms)
+Write fragment views/paintings/31-20130624152921 (14.7ms)
+Read fragment views/paintings/32-20130624152935 (0.1ms)
+Write fragment views/paintings/32-20130624152935 (13.2ms)
+  Rendered shared/_list.html.haml (151.7ms)
+Write fragment views/paintings (10.9ms)
+  Rendered paintings/index.html.haml within layouts/application (164.6ms)
+Completed 200 OK in 179ms (Views: 175.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2013-08-03 14:52:27 -0400
+Processing by PaintingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/paintings (0.2ms)
+  Rendered paintings/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 14:52:54 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/papers (0.1ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  Rendered shared/_list.html.haml (1.5ms)
+Write fragment views/papers (9.0ms)
+  Rendered papers/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-03 14:53:02 -0400
+Processing by HomeController#about as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  [1m[35mSchool Load (0.3ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+Read fragment views/bio_image/1374547677 (0.1ms)
+Write fragment views/bio_image/1374547677 (8.8ms)
+  Rendered home/about.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-08-03 14:53:48 -0400
+Processing by HomeController#contact as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/contact_image/1374547677 (0.2ms)
+Write fragment views/contact_image/1374547677 (73.3ms)
+  Rendered home/contact.html.haml within layouts/application (76.3ms)
+Completed 200 OK in 95ms (Views: 90.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-08-03 14:54:02 -0400
+Processing by LinksController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "links" [0m
+  Rendered links/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:54:04 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.2ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.4ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.4ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.0ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-08-03 14:54:31 -0400
+Processing by PapersController#new as JS
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_work_form.html.haml (69.6ms)
+  Rendered papers/new.js.erb (72.5ms)
+Completed 200 OK in 186ms (Views: 175.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-08-03 14:54:48 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f94d78e4b08 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130803-8599-ygcpyi>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Sat, 03 Aug 2013 18:54:48 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Sat, 03 Aug 2013 18:54:48 UTC +00:00]]
+  [1m[36m (99.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11563ms (ActiveRecord: 106.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:55:04 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/admin_paintings (0.2ms)
+Read fragment views/admin_papers (0.1ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[36mExhibition Load (0.6ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.5ms)
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.3ms)
+  [1m[36mSchool Load (0.6ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.5ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 32ms (Views: 25.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:57:47 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d40450e0>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.5ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.2ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d40450e0>/admin_paintings (8.8ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d404b1c0>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.5ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/12-20130803185448/admin (0.1ms)
+Write fragment views/papers/12-20130803185448/admin (10.6ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d404b1c0>/admin_papers (9.3ms)
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.2ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.1ms)
+  [1m[35mSchool Load (0.5ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.4ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.1ms)
+  Rendered home/admin.html.haml within layouts/application (75.1ms)
+Completed 200 OK in 88ms (Views: 80.8ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/papers/12" for 127.0.0.1 at 2013-08-03 14:59:22 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "id"=>"12"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPaper Load (0.7ms)[0m  [1mSELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "papers" WHERE "papers"."id" = 12
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 60ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:59:23 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d78c9858>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.6ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.2ms)
+Read fragment views/paintings/31-20130624152921/admin (0.2ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d78c9858>/admin_paintings (10.1ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d78ca848>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Write fragment views/#<ActiveRecord::Relation:0x007f94d78ca848>/admin_papers (12.8ms)
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (3.1ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.4ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.0ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (50.9ms)
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-08-03 14:59:26 -0400
+Processing by PapersController#new as JS
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered shared/_work_form.html.haml (2.5ms)
+  Rendered papers/new.js.erb (3.7ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-08-03 14:59:32 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f94d7b56030 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130803-8599-14l6ef1>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Sat, 03 Aug 2013 18:59:32 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Sat, 03 Aug 2013 18:59:32 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11144ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 14:59:47 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d7e07dd8>/admin_paintings (0.2ms)
+  [1m[36mPainting Load (0.5ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d7e07dd8>/admin_paintings (9.4ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d2328660>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.5ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/13-20130803185932/admin (0.1ms)
+Write fragment views/papers/13-20130803185932/admin (65.3ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d2328660>/admin_papers (10.7ms)
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.9ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.0ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (115.7ms)
+Completed 200 OK in 128ms (Views: 121.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 14:59:54 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/papers (0.2ms)
+  Rendered papers/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 15:01:06 -0400
+Processing by PapersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007f94d23b7a68> (0.1ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "papers" 
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Read fragment views/papers/13-20130803185932 (0.1ms)
+Write fragment views/papers/13-20130803185932 (11.1ms)
+  Rendered shared/_list.html.haml (15.2ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d23b7a68> (56.3ms)
+  Rendered papers/index.html.haml within layouts/application (75.9ms)
+Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 15:01:07 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007f94d441e4a0> (0.2ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  [1m[35mPaper Load (0.5ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/13-20130803185932 (0.3ms)
+  Rendered shared/_list.html.haml (4.7ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d441e4a0> (11.9ms)
+  Rendered papers/index.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:01:26 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d78c2a80>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.4ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.2ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.2ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.5ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d78c2a80>/admin_paintings (10.1ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d78c1a40>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/13-20130803185932/admin (0.2ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d78c1a40>/admin_papers (12.6ms)
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.7ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.7ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.9ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.5ms)
+  Rendered home/admin.html.haml within layouts/application (117.4ms)
+Completed 200 OK in 132ms (Views: 125.0ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/papers/13" for 127.0.0.1 at 2013-08-03 15:01:30 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "id"=>"13"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPaper Load (0.5ms)[0m  [1mSELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "papers" WHERE "papers"."id" = 13
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:01:30 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d4494dd0>/admin_paintings (0.2ms)
+  [1m[36mPainting Load (0.6ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d4494dd0>/admin_paintings (2.8ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d44939d0>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Write fragment views/#<ActiveRecord::Relation:0x007f94d44939d0>/admin_papers (11.7ms)
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (3.2ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (3.1ms)
+  [1m[36mTeachingPosition Load (0.5ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.6ms)
+  Rendered home/admin.html.haml within layouts/application (47.0ms)
+Completed 200 OK in 62ms (Views: 53.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 15:01:33 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007f94d404f2e8> (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  Rendered shared/_list.html.haml (1.3ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d404f2e8> (2.2ms)
+  Rendered papers/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:01:36 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/#<ActiveRecord::Relation:0x007f94d7be0028>/admin_paintings (0.1ms)
+  [1m[35mPainting Load (0.6ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d7be0028>/admin_paintings (8.8ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d67cce88>/admin_papers (0.1ms)
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Write fragment views/#<ActiveRecord::Relation:0x007f94d67cce88>/admin_papers (9.5ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.7ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.1ms)
+  Rendered home/admin.html.haml within layouts/application (44.3ms)
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/papers/new" for 127.0.0.1 at 2013-08-03 15:01:38 -0400
+Processing by PapersController#new as JS
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_work_form.html.haml (2.4ms)
+  Rendered papers/new.js.erb (3.5ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/papers" for 127.0.0.1 at 2013-08-03 15:01:43 -0400
+Processing by PapersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "paper"=>{"name"=>"", "description"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f94d54af210 @original_filename="bird.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"paper[image]\"; filename=\"bird.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/fb/75860dcd79db_20z6mcb2hv80000gn/T/RackMultipart20130803-8599-1vk10s7>>, "remote_image_url"=>""}, "commit"=>"Create Paper"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "papers" ("created_at", "description", "image", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Sat, 03 Aug 2013 19:01:43 UTC +00:00], ["description", ""], ["image", "bird.jpg"], ["name", ""], ["updated_at", Sat, 03 Aug 2013 19:01:43 UTC +00:00]]
+  [1m[36m (98.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11041ms (ActiveRecord: 99.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:01:58 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/#<ActiveRecord::Relation:0x007f94d7e09278>/admin_paintings (0.1ms)
+  [1m[35mPainting Load (0.4ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d7e09278>/admin_paintings (9.2ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d7e07130>/admin_papers (0.1ms)
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Read fragment views/papers/14-20130803190143/admin (0.1ms)
+Write fragment views/papers/14-20130803190143/admin (56.8ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d7e07130>/admin_papers (9.5ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[35mExhibition Load (0.4ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.6ms)
+  [1m[36mSchool Load (0.6ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (3.6ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (105.2ms)
+Completed 200 OK in 118ms (Views: 111.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 15:02:03 -0400
+Processing by PapersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007f94d548bbd0> (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "papers" 
+  [1m[36mPaper Load (0.3ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Read fragment views/papers/14-20130803190143 (0.1ms)
+Write fragment views/papers/14-20130803190143 (11.5ms)
+  Rendered shared/_list.html.haml (15.6ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d548bbd0> (10.3ms)
+  Rendered papers/index.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/papers" for 127.0.0.1 at 2013-08-03 15:02:04 -0400
+Processing by PapersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007f94d64f3540> (0.2ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "papers" [0m
+  [1m[35mPaper Load (0.3ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/14-20130803190143 (0.2ms)
+  Rendered shared/_list.html.haml (3.6ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d64f3540> (13.5ms)
+  Rendered papers/index.html.haml within layouts/application (20.5ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:02:14 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d3a054a0>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.6ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.2ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d3a054a0>/admin_paintings (8.8ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d4347748>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.5ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Read fragment views/papers/14-20130803190143/admin (0.2ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d4347748>/admin_papers (10.4ms)
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.1ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.5ms)
+  [1m[36mExhibition Load (0.4ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.3ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.1ms)
+  [1m[36mTeachingPosition Load (0.4ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.1ms)
+  Rendered home/admin.html.haml within layouts/application (46.3ms)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/papers/14" for 127.0.0.1 at 2013-08-03 15:02:16 -0400
+Processing by PapersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EcFU/wnxdmkeZ3d+L7fuz2tOXELDsu8NMtpQ2JEpLVE=", "id"=>"14"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" WHERE "papers"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  [1m[35mSQL (109.3ms)[0m  DELETE FROM "papers" WHERE "papers"."id" = 14
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 168ms (ActiveRecord: 110.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:02:17 -0400
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007f94d2377f80>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.5ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.2ms)
+Write fragment views/#<ActiveRecord::Relation:0x007f94d2377f80>/admin_paintings (10.9ms)
+Read fragment views/#<ActiveRecord::Relation:0x007f94d7d49180>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Write fragment views/#<ActiveRecord::Relation:0x007f94d7d49180>/admin_papers (4.0ms)
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/admin_bio_image/1374547677 (0.2ms)
+Read fragment views/admin_contact_image/1374547677 (0.1ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.8ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.3ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (2.0ms)
+  [1m[36mTeachingPosition Load (0.3ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.2ms)
+  Rendered home/admin.html.haml within layouts/application (42.8ms)
+Completed 200 OK in 58ms (Views: 49.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:05:06 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#admin as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/#<ActiveRecord::Relation:0x007faf5ea34f70>/admin_paintings (0.1ms)
+  [1m[36mPainting Load (0.7ms)[0m  [1mSELECT "paintings".* FROM "paintings" ORDER BY created_at[0m
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007faf5ea34f70>/admin_paintings (9.1ms)
+Read fragment views/#<ActiveRecord::Relation:0x007faf5ef41a40>/admin_papers (0.1ms)
+  [1m[35mPaper Load (0.4ms)[0m  SELECT "papers".* FROM "papers" ORDER BY created_at
+Write fragment views/#<ActiveRecord::Relation:0x007faf5ef41a40>/admin_papers (10.1ms)
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" ORDER BY created_at[0m
+Read fragment views/users/3-20130723024757/admin_bio_image (0.1ms)
+Write fragment views/users/3-20130723024757/admin_bio_image (9.4ms)
+Read fragment views/users/3-20130723024757/admin_contact_image (0.1ms)
+Write fragment views/users/3-20130723024757/admin_contact_image (10.3ms)
+  [1m[35mExhibition Load (0.9ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (57.2ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (1.5ms)
+  [1m[35mSchool Load (0.4ms)[0m  SELECT "schools".* FROM "schools" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (11.7ms)
+  [1m[36mTeachingPosition Load (0.5ms)[0m  [1mSELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (5.1ms)
+  Rendered home/admin.html.haml within layouts/application (212.6ms)
+Compiled foundation/stylesheets/foundation.min.css  (0ms)  (pid 8912)
+Compiled foundation/stylesheets/app.css  (0ms)  (pid 8912)
+Compiled style.css  (47ms)  (pid 8912)
+Compiled application.css  (174ms)  (pid 8912)
+Compiled jquery.js  (2ms)  (pid 8912)
+Compiled jquery_ujs.js  (0ms)  (pid 8912)
+Compiled underscore-min.js  (0ms)  (pid 8912)
+Compiled foundation/javascripts/modernizr.foundation.js  (0ms)  (pid 8912)
+Compiled foundation/javascripts/foundation.min.js  (2ms)  (pid 8912)
+Compiled foundation/javascripts/app.js  (0ms)  (pid 8912)
+Compiled jquery.purr.js  (0ms)  (pid 8912)
+Compiled best_in_place.js  (1ms)  (pid 8912)
+Compiled art.js  (0ms)  (pid 8912)
+Compiled application.js  (446ms)  (pid 8912)
+Completed 200 OK in 1210ms (Views: 1020.1ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-08-03 15:05:48 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Read fragment views/#<ActiveRecord::Relation:0x007faf5ee6abf8>/admin_paintings (0.1ms)
+  [1m[35mPainting Load (0.7ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Read fragment views/paintings/25-20130624152734/admin (0.2ms)
+Read fragment views/paintings/26-20130624152753/admin (0.1ms)
+Read fragment views/paintings/27-20130624152809/admin (0.1ms)
+Read fragment views/paintings/28-20130624152835/admin (0.1ms)
+Read fragment views/paintings/29-20130624152850/admin (0.1ms)
+Read fragment views/paintings/30-20130624152907/admin (0.1ms)
+Read fragment views/paintings/31-20130624152921/admin (0.1ms)
+Read fragment views/paintings/32-20130624152935/admin (0.1ms)
+Write fragment views/#<ActiveRecord::Relation:0x007faf5ee6abf8>/admin_paintings (8.8ms)
+Read fragment views/#<ActiveRecord::Relation:0x007faf5f869d20>/admin_papers (0.1ms)
+  [1m[36mPaper Load (0.4ms)[0m  [1mSELECT "papers".* FROM "papers" ORDER BY created_at[0m
+Write fragment views/#<ActiveRecord::Relation:0x007faf5f869d20>/admin_papers (9.5ms)
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" ORDER BY created_at
+Read fragment views/users/3-20130723024757/admin_bio_image (0.2ms)
+Read fragment views/users/3-20130723024757/admin_contact_image (0.1ms)
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.3ms)
+  [1m[35mExhibition Load (0.5ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.3ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered shared/_table.html.haml (2.1ms)
+  [1m[35mTeachingPosition Load (0.4ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+  Rendered shared/_table.html.haml (1.0ms)
+  Rendered home/admin.html.haml within layouts/application (43.0ms)
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-03 15:06:49 -0400
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mExhibition Load (0.5ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'solo' ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (1.3ms)
+  [1m[35mExhibition Load (0.6ms)[0m  SELECT "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."kind" = 'group' ORDER BY created_at DESC
+  [1m[36mSchool Load (0.5ms)[0m  [1mSELECT "schools".* FROM "schools" ORDER BY created_at DESC[0m
+  Rendered home/_table.html.haml (0.1ms)
+  [1m[35mTeachingPosition Load (0.3ms)[0m  SELECT "teaching_positions".* FROM "teaching_positions" ORDER BY created_at DESC
+Read fragment views/users/3-20130723024757/bio_image (0.1ms)
+Write fragment views/users/3-20130723024757/bio_image (51.3ms)
+  Rendered home/about.html.haml within layouts/application (65.8ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2013-08-03 15:06:59 -0400
+Processing by HomeController#contact as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+Read fragment views/users/3-20130723024757/contact_image (0.1ms)
+Write fragment views/users/3-20130723024757/contact_image (8.7ms)
+  Rendered home/contact.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-03 15:12:10 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Read fragment views/#<ActiveRecord::Relation:0x007ffd5f55c468>/slider (0.1ms)
+  [1m[35mPainting Load (0.7ms)[0m  SELECT "paintings".* FROM "paintings" ORDER BY created_at
+Write fragment views/#<ActiveRecord::Relation:0x007ffd5f55c468>/slider (9.4ms)
+  Rendered home/index.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 230ms (Views: 91.6ms | ActiveRecord: 15.4ms)

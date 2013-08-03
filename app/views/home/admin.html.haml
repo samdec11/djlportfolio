@@ -5,36 +5,38 @@
     #paint_form
     %br
     %br
-    - cache 'admin_paintings' do
+    - cache [@paintings, 'admin_paintings'] do
       - @paintings.each do |painting|
-        .row
-          .six.columns
-            = image_tag painting.image, class: 'admin'
-          .six.columns
-            %ul.admin
-              %li= "Title: #{painting.name}"
-              %li= "Description: #{painting.description}"
-              %li
-                = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
-                = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
+        - cache [painting, 'admin'] do
+          .row
+            .six.columns
+              = image_tag painting.image, class: 'admin'
+            .six.columns
+              %ul.admin
+                %li= "Title: #{painting.name}"
+                %li= "Description: #{painting.description}"
+                %li
+                  = link_to 'Edit', edit_painting_path(painting.id), class: 'button tiny', remote: true
+                  = link_to 'Delete', painting, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
   .four.columns
     %h3 Works on Paper
     = link_to 'New Work', new_paper_path, class: 'button small success', remote: true
     #paper_form
     %br
     %br
-    - cache 'admin_papers' do
+    - cache [@papers, 'admin_papers'] do
       - @papers.each do |paper|
-        .row
-          .six.columns
-            = image_tag paper.image, class: 'admin'
-          .six.columns
-            %ul.admin
-              %li= "Title: #{paper.name}"
-              %li= "Description: #{paper.description}"
-              %li
-                = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
-                = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
+        - cache [paper, 'admin'] do
+          .row
+            .six.columns
+              = image_tag paper.image, class: 'admin'
+            .six.columns
+              %ul.admin
+                %li= "Title: #{paper.name}"
+                %li= "Description: #{paper.description}"
+                %li
+                  = link_to 'Edit', edit_paper_path(paper.id), class: 'button tiny', remote: true
+                  = link_to 'Delete', paper, :method => :delete, class: 'button tiny alert', confirm: 'Are you sure you want to delete this?'
   .four.columns
     %h3 Links
     = link_to 'New Link', new_link_path, class: 'button small success', remote: true
@@ -61,7 +63,7 @@
         = best_in_place @user, :artist_statement, :type => :textarea
     .row
       .six.columns
-        - cache 'admin_bio_image' do
+        - cache [@user, 'admin_bio_image'] do
           %h4 
             Bio Image
             = link_to 'Edit', edit_bio_user_path(@user.id), class: 'button tiny', remote: true
@@ -69,7 +71,7 @@
           .twelve.columns
             = image_tag @user.bio_image
       .six.columns
-        - cache 'admin_contact_image' do
+        - cache [@user, 'admin_contact_image'] do
           %h4 
             Contact Image
             = link_to 'Edit', edit_contact_user_path(@user.id), class: 'button tiny', remote: true
